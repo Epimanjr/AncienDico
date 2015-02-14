@@ -1,0 +1,35 @@
+<project default="run">
+
+<target name="clean">
+    <delete dir="bin"/>
+</target>
+
+<target name="compile" depends="clean">
+  <mkdir dir="bin"/>
+  <javac srcdir="src"
+         destdir="bin"
+         classpath="lib/jl1.0.1.jar;lib/mysql-connector-java-5.1.23-bin.jar;word-reference-api-0.0.22.jar"
+         encoding="utf8"
+  />
+</target>
+
+<target name="jar" depends="compile">
+  <jar destfile="MaxTranslator.jar">
+        <fileset dir="bin"/>
+        <archives>
+          <zips>
+            <fileset dir="lib" includes="**/*.jar"/>
+          </zips>
+        </archives>
+        <manifest>
+          <attribute name="Main-Class"
+            value="graphique.Fenetre"/>
+        </manifest>
+  </jar>
+</target>
+
+<target name="run" depends="jar">
+  <java jar="MaxTranslator.jar" fork="true" />
+</target>
+
+</project>
