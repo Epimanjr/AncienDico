@@ -1,4 +1,4 @@
-﻿1;fr;prénom;;une
+1;fr;prénom;;une
 2;fr;homme;;un
 3;fr;habiter;;v
 4;fr;jus de fruit;;un
@@ -644,3 +644,21 @@
 645;fr;conducteur de bus;-;le
 646;de;Fliesenleger;-;der
 647;de;Busfahrer;-;der
+647;fr;boulanger;-;un
+648;de;Bäcker;-;der
+649;fr;peintre;-;un
+650;de;Maler;-;der
+651;fr;gardien d'animaux;-;un
+652;de;Tierpfleger;-;der
+653;fr;horloger;-;un
+654;de;Uhrmacher;-;der
+655;fr;plombier;-;un
+656;de;Installateur;-;der
+657;fr;coiffeur;-;un
+658;de;Frisör;-;der
+659;fr;électricien;-;un
+660;de;Elektriker;-;der
+661;fr;paysan;-;un
+662;de;Bauer;-;der
+663;fr;photographe;-;un
+664;de;Fotograph;-;der

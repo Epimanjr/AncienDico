@@ -1,4 +1,4 @@
-﻿3;frch;prénom;名字
+3;frch;prénom;名字
 4;frch;homme;男人
 5;frch;habiter;住
 6;frch;jus de fruit;果汁
@@ -421,3 +421,12 @@
 421;frde;jardinier;Gärtner
 422;frde;carreleur;Fliesenleger
 424;frde;conducteur de bus;Busfahrer
+424;frde;boulanger;Bäcker
+425;frde;peintre;Maler
+426;frde;gardien d'animaux;Tierpfleger
+427;frde;horloger;Uhrmacher
+428;frde;plombier;Installateur
+429;frde;coiffeur;Frisör
+430;frde;électricien;Elektriker
+431;frde;paysan;Bauer
+432;frde;photographe;Fotograph

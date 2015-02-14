@@ -1,2 +1,16 @@
 Berufe
 couvreur;Dachdecker
+cantonnier;Straßenarbeiter
+mécanicien;Mechaniker
+jardinier;Gärtner
+carreleur;Fliesenleger
+conducteur de bus;Busfahrer
+boulanger;Bäcker
+peintre;Maler
+gardien d'animaux;Tierpfleger
+horloger;Uhrmacher
+plombier;Installateur
+coiffeur;Frisör
+électricien;Elektriker
+paysan;Bauer
+photographe;Fotograph
