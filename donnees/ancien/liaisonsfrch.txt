@@ -1,0 +1,202 @@
+3;prénom;míngzì;名字
+4;homme;nánren;男人
+5;habiter;zhù;住
+6;jus de fruit;guǒzhī;果汁
+7;thé;chá;茶
+8;eau;shuǐ;水
+9;lait;niúnǎi;牛奶
+10;biere;píjiǔ;啤酒
+11;bol;wǎn;碗
+13;epinard;bōcài;菠菜
+14;aubergine;qiézi;茄子
+15;tomate;xīhóngshì;西红柿
+16;patate;tǔdòu;土豆
+17;fievre;fāshāo;发烧
+18;vomir;ǒutù;呕吐
+19;besoin;xūyào;需要
+20;aimer;xǐhuan;喜欢
+21;aimer;ài;爱
+22;assiette;pánzi;盘子
+23;mois;yuè;月
+24;annee;nián;年
+25;sexe;xìngbié;性别
+26;pleurer;kū;哭
+27;bonheur;xìngfú;幸福
+28;content;gāoxìng;高兴
+29;satisfait;mǎnyìde;满意的
+30;inquiet;dānxīnde;担心的
+31;colère;shēngqì;生气
+32;surpris;shǐ…jīngyà;使……惊讶
+33;incroyable;nányǐzhìxìnde;难以置信的
+34;manger;chī;吃
+35;boire;hē;喝
+36;soif;kě;渴
+37;faim;è;饿
+38;malade;shēng bìng;生病
+39;gorge;hóu lóng;喉咙
+40;mal de gorge;hóu lóng tòng;喉咙痛
+41;qui;shéi;谁
+42;quoi;shénme;什么
+43;où;nálǐ;哪里
+44;pourquoi;wèishénme;为什么
+45;combien;duōshǎo;多少
+46;clavier;jiànpán;键盘
+47;logiciel;ruǎnjiàn;软件
+48;nom;xìng;姓
+49;pièce d'identité;shēnfenzhèng;神分证
+50;âge;suìshu;岁数
+51;célibataire;wèihūn;未婚
+52;date de naissance;chūshēng rìqí;出生日期
+53;divorcé;líyì;离异
+54;nationalité;guójí;国籍
+55;lieu de naissance;chūshēng dì;出生地
+56;présenter;jièshào;介绍
+57;passeport;hùzhào;护照
+58;connaître;rènshi;认识
+59;identité;shēnfen;身份
+60;marié;yǐhūn;已婚
+61;cv;jiǎnlì;简历
+62;curriculum vitae;jiǎnlì;简历
+63;diplôme;xuéwèi;学位
+64;coordonnées;liánxìfāngshì;联系方式
+65;téléphone professionnel;bàngōng diànhuà;办公电话
+66;cursus;xuélì;学历
+67;adresse;dìzhǐ;地址
+68;profession;zhíyè;职业
+69;téléphone personnel;gèrén diànhuà;个人电话
+70;niveau d'études;jiàoyù chéngdù;教育程度
+71;expérience professionnelle;gōngzuò jīnglì;工作经历
+72;numéro de téléphone;diànhuà hàomǎ;电话号码
+73;loisirs;yèyú àihào;业余爱好
+74;loisir;yèyú àihào;业余爱好
+75;spécialité;zhuānyè;专业
+76;poste recherché;xīwàng zhíwèi;希望职位
+77;adresse e-mail;diànzǐ yóujiàn dìzhǐ;电子邮件地址
+78;adresse email;diànzǐ yóujiàn dìzhǐ;电子邮件地址
+79;caractère;xìnggé;性格
+80;yeux;yǎnjīng;眼睛
+81;tête;tóu;头
+82;sentir;wén ;闻
+83;écouter;tīng;听
+84;cure-dent;yáqiān;牙签
+85;fourchette;chāzi;叉子
+86;couteau;dāozi;刀子
+87;cuillère;sháozi;勺子
+88;tasse;bēizi;杯子
+89;serviette;cānjīnzhǐ;餐巾纸
+90;haricot;biǎndòu;扁豆
+91;tofu;dòufu;豆腐
+92;poivron vert;qīngjiāo;青椒
+93;pomme de terre;tǔdòu;土豆
+94;brocoli;xīlánhuā;西兰花
+95;chou;yángbáicài;洋白菜
+96;maïs;yùmǐ;玉米
+97;blé;yùmǐ;玉米
+98;bambou;zhúsǔn;竹笋
+99;acheter;mǎi;买
+100;vendre;mài;卖
+101;je;wǒ ;我
+102;tu;nǐ ;你
+103;je t'aime;wǒàinǐ;我爱你
+104;soupe aux oeufs;dànhuātāng;蛋花汤
+105;la livre;jīn;斤
+106;gramme;kè;克
+107;kilogramme;gōngjīn;公斤
+108;milligramme;háokè;毫克
+109;litre;shēng;升
+110;centimètre;límǐ;厘米
+111;kilomètre;gōnglǐ;公里
+112;mètre;mǐ;米
+113;blanc;báisè;白色
+114;couleur;yánsè;颜色
+115;rose;fěnhóngsè;粉红色
+116;noir;hēisè;黑色
+117;rouge;hóngsè;红色
+118;jaune;huángsè;黄色
+119;bleu;lánsè;蓝色
+120;violet;zǐsè;紫色
+121;fruit;shuǐguǒ;水果
+122;pomme;píngguǒ;苹果
+123;orange;júzi;桔子
+124;animal;dòngwù;动物
+125;cochon;zhū;猪
+126;corbeau;wūyā;乌鸦
+127;insecte;kūnchóng;昆虫
+128;chien;gǒu;狗
+129;singe;hóuzi;猴子
+130;aigle;lǎoyīng;老鹰
+131;mouche;cāngying;苍蝇
+132;chat;māo;猫
+133;lion;shīzi;狮子
+134;poisson;yú;鱼
+135;moustique;wénzi;蚊子
+136;souris;lǎoshǔ;老鼠
+137;loup;láng;狼
+138;tortue;wūguī;乌龟
+139;papillon;húdié;蝴蝶
+140;lapin;tùzǐ;兔子
+141;tigre;lǎohǔ;老虎
+142;grenouille;qīngwā;青蛙
+143;abeille;mìfēng;蜜蜂
+144;vache;niú;牛
+145;cerf;lù;鹿
+146;serpent;shé;蛇
+147;cafard;zhāngláng;蟑螂
+148;cheval;mǎ;马
+149;éléphant;dàxiàng;大象
+150;crocodile;èyú;鳄鱼
+151;araignée;zhīzhū;蜘蛛
+152;chèvre;shānyáng;山羊
+153;ours;xióng;熊
+154;fourmi;mǎyǐ;蚂蚁
+155;oiseau;niǎo;鸟
+156;mouton;yáng;羊
+157;pêche;táozi;桃子
+158;poire;lí;梨
+159;orange;chéngzi;橙子
+160;banane;xiāngjiāo;香蕉
+161;abricot;xìngr;杏儿
+162;raisin;pútáo;葡萄
+163;kiwi;míhóutáo;猕猴桃
+164;litchi;lìzhī;荔枝
+165;cerise;yīngtáo;樱桃
+166;fraise;cǎoméi;草莓
+167;pastèque;xīguā;西瓜
+168;ananas;bōluó;菠萝
+169;jujube;zǎor;枣儿
+170;mandarine;júzi;橘子
+171;melon;xiāngguā;香瓜
+172;citron;níngméng;柠檬
+173;mangue;mángguǒ;芒果
+174;maison;fángzi;房子
+175;travaux;zhuāngxiū;装修
+176;terrasse;yángtái;阳台
+177;pièce;fángjiān;房间
+178;escalier;lóutī;楼梯
+179;cuisine;chúfáng;厨房
+180;fenêtre;chuānghu;窗户
+181;salle de bain;yùshì;浴室
+182;salon;kètīng;客厅
+183;toilettes;cèsuǒ;厕所
+184;ordinateur;diànnǎo;电脑
+185;imprimante;dǎyìnjī;打印机
+186;écran;píngmù;屏幕
+187;haut-parleur;yīnxiāng;音箱
+188;souris;shǔbiāo;鼠标
+189;ordinateur portable;bǐjìběn diànnǎo;笔记本电脑
+190;disque dur;yìngpán;硬盘
+191;programme;chéngxù;程序
+192;réseau;wǎngluò;网络
+193;fichier;wénjiàn;文件
+194;dossier;wénjiànjiá;文件夹
+195;corbeille;lèsè tǒng;垃圾桶
+196;connecter;liánjiē;连接
+197;télécharger;xiàzài;下载
+198;envoyer;fāsòng;发送
+199;taxi;chūzū chē;出租车
+200;honte;chǐrǔ;耻辱
+201;gare;huǒchēzhàn;火车站
+202;train;huǒchē;火车
+203;bus;gōnggòng qìchē;公共汽车
+204;vélo;zìxíngchē;自行车
+205;voiture;qìchē;汽车

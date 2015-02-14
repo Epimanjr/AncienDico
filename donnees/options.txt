@@ -1,0 +1,5 @@
+modeverbeux=non
+activervoix=oui
+modegraphique=oui
+dossier=path
+modebdd=non

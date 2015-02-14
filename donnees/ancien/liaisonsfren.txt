@@ -1,0 +1,149 @@
+2;nom;name
+3;pièce d'identité;proof of identity
+4;habiter;live
+5;âge;age
+6;célibataire;unmarried
+7;prénom;first name
+8;sexe;sex
+9;date de naissance;date of birth
+10;divorcé;divorce
+11;nationalité;nationality
+12;lieu de naissance;birthplace
+13;présenter;introduce
+14;passeport;passport
+15;homme;man
+16;connaître;know
+17;identité;identity
+18;marié;married
+19;écran;screen
+20;citer;quote
+21;être humain;human being
+22;coordonnées;personal details
+23;mariage;wedding
+24;yeux;eyes
+25;tête;head
+26;écouter;hear
+27;écouter;listen
+28;cure-dent;toothpick
+29;fourchette;fork
+30;couteau;knife
+31;cuillère;spoon
+32;tasse;cup
+33;assiette;dish
+34;bol;bowl
+35;serviette;towel
+36;haricot;haricot
+37;épinard;spinach
+38;tofu;tofu
+39;aubergine;aubergine
+40;poivron vert;green pepper
+41;pomme de terre;potato
+42;patate;potato
+43;tomate;tomato
+44;brocoli;broccoli
+45;chou;cabbage
+46;maïs;corn
+47;blé;corn
+48;bambou;bamboo
+49;acheter;buy
+50;vendre;sell
+51;la livre;pound
+52;gramme;gram
+53;kilogramme;kilogram
+54;milligramme;milligram
+55;litre;litre
+56;centimètre;centimetre
+57;kilomètre;kilometre
+58;mètre;metre
+59;blanc;white
+60;couleur;color
+61;rose;pink
+62;noir;dark
+63;rouge;red
+64;jaune;yellow
+65;orange;orange
+66;bleu;blue
+67;violet;purple
+68;fruit;fruit
+69;pomme;apple
+70;animal;animal
+71;cochon;pig
+72;corbeau;raven
+73;insecte;insect
+74;chien;dog
+75;singe;monkey
+76;aigle;eagle
+77;mouche;fly
+78;chat;cat
+79;lion;lion
+80;poisson;fish
+81;moustique;mosquito
+82;souris;mouse
+83;loup;wolf
+84;tortue;turtle
+85;papillon;butterfly
+86;lapin;rabbit
+87;tigre;tiger
+88;grenouille;frog
+89;abeille;bee
+90;vache;cow
+91;cerf;deer
+92;serpent;snake
+93;cafard;cockroach
+94;cheval;horse
+95;éléphant;elephant
+96;crocodile;crocodile
+97;araignée;spider
+99;chèvre;goat
+100;ours;bear
+101;fourmi;ant
+102;oiseau;bird
+103;mouton;sheep
+104;pêche;peach
+105;poire;pear
+106;banane;banana
+107;abricot;apricot
+108;raisin;grape
+109;kiwi;kiwi
+110;litchi;litchi
+111;cerise;cherry
+112;fraise;strawberry
+113;pastèque;watermelon
+114;ananas;pineapple
+115;jujube;jujube
+116;mandarine;mandarin
+117;melon;melon
+118;citron;lemon
+119;mangue;mango
+120;maison;house
+121;terrasse;terrace
+122;pièce;room
+123;escalier;stairs
+124;cuisine;kitchen
+125;fenêtre;window
+126;salle de bain;bathroom
+127;salon;living room
+128;toilettes;WC
+129;ordinateur;computer
+130;imprimante;printer
+131;haut-parleur;speaker
+132;clavier;keyboard
+133;ordinateur portable;laptop
+134;disque dur;hard drive
+135;logiciel;software
+136;programme;program
+137;réseau;network
+138;fichier;file
+139;dossier;folder
+140;corbeille;trash
+141;connecter;connect
+142;télécharger;download
+143;envoyer;send
+144;taxi;taxi
+145;manger;eat
+146;honte;shame
+147;aimer;love
+148;base de données;database
+149;bureautique;office automation
+150;répertoire;directory
+151;voiture;car

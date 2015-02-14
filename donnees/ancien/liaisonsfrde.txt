@@ -1,0 +1,25 @@
+2;bol;Schale
+3;déranger;stören
+4;crier;brüllen
+5;en fait;eigentlich
+6;merveille;Wunder
+7;gâteau;Torte
+8;au fait;übrigens
+9;d'ailleurs;übrigens
+10;gare;Bahnhof
+11;bras;Arm
+12;feu de signalisation;Ampel
+13;feu;Ampel
+14;encore;noch
+15;cependant;doch
+16;gens;Leute
+17;vraiment;wirklich
+18;important;wichtig
+19;être debout;stehen
+20;chien;Hund
+21;chat;Katze
+22;singe;Affe
+23;cochon;Schwein
+24;corbeau;Rabe
+25;aimer;liebe
+26;compter;zählen

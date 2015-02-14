@@ -1,0 +1,13 @@
+fond=238;238;238
+label=0;0;0
+labelTitre=150;0;0
+labelPratiquer1=150;0;0
+labelPratiquer2=0;150;0
+bouton=51;51;51
+boutonFond=238;238;238
+textField=51;51;51
+textFieldFond=255;255;255
+labelLangue=150;0;0
+labelResultats=0;150;0
+list=0;0;0
+table=0;0;0

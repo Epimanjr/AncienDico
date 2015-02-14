@@ -1,0 +1,10 @@
+Animaux
+chien;dog
+singe;monkey
+loup;wolf
+lion;lion
+tigre;tiger
+chat;cat
+mouche;fly
+abeille;bee
+tortue;turtle

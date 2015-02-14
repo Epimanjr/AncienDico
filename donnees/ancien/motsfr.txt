@@ -1,0 +1,232 @@
+1;prénom;un
+2;homme;un
+3;habiter;v
+4;jus de fruit;un
+5;thé;du
+6;eau;de l'
+7;lait;du
+8;biere;une
+9;bol;un
+10;fourchette;une
+11;epinard;
+12;aubergin;une
+13;tomate;une
+14;patate;une
+15;fievre;la
+16;vomir;v
+17;besoin;
+18;aimer;v
+31;J'habite;
+32;à;
+33;Sarrebourg;ville
+34;assiette;une
+35;mois;un
+36;annee;une
+37;sexe;un
+38;pleurer;v
+39;bonheur;
+40;content;
+41;satisfait;
+42;inquiet;
+43;colère;la
+44;surpris;
+45;incroyable;
+46;manger;v
+47;boire;v
+48;soif;
+50;j'ai;
+51;faim;la
+52;malade;
+53;je;
+54;suis;
+55;gorge;la
+56;mal de gorge;un
+57;qui;
+58;quoi;
+59;où;
+60;pourquoi;
+61;combien;
+62;clavier;le
+63;logiciel;le
+64;nom;un
+65;pièce d'identité;une
+66;âge;
+67;célibataire;
+68;date de naissance;une
+69;divorcé;
+70;nationalité;une
+71;lieu de naissance;un
+72;présenter;
+73;passeport;
+74;connaître;
+75;identité;
+76;marié;
+77;cv;
+78;curriculum vitae;
+79;diplôme;
+80;coordonnées;
+81;téléphone professionnel;
+82;cursus;
+83;adresse;
+84;profession;
+85;téléphone personnel;
+86;niveau d'études;
+87;expérience professionnelle;
+88;numéro de téléphone;
+89;loisirs;
+90;loisir;
+91;spécialité;
+92;poste recherché;
+93;adresse e-mail;
+94;adresse email;
+95;caractère;
+96;écran;
+97;citer;
+98;être humain;
+99;mariage;
+100;yeux;
+101;tête;
+102;sentir;
+103;écouter;
+104;cure-dent;
+105;couteau;un
+106;cuillère;
+107;tasse;
+108;serviette;une
+109;haricot;
+110;tofu;
+111;poivron vert;un
+112;pomme de terre;une
+113;brocoli;
+114;chou;
+115;maïs;
+116;blé;
+117;bambou;
+118;acheter;
+119;vendre;
+120;tu;
+121;je t'aime;
+122;soupe aux oeufs;
+123;la livre;
+124;gramme;
+125;kilogramme;
+126;milligramme;
+127;litre;
+128;centimètre;
+129;kilomètre;
+130;mètre;
+131;blanc;
+132;couleur;
+133;rose;
+134;noir;
+135;rouge;
+136;jaune;
+137;orange;une
+138;bleu;
+139;violet;
+140;fruit;
+141;pomme;une
+142;animal;un
+143;cochon;un
+144;corbeau;un
+145;insecte;un
+146;chien;un
+147;singe;un
+148;aigle;un
+149;mouche;une
+150;chat;un
+151;lion;un
+152;poisson;un
+153;moustique;un
+154;souris;une
+155;loup;un
+156;tortue;une
+157;papillon;un
+158;lapin;un
+159;tigre;un
+160;grenouille;une
+161;abeille;une
+162;vache;une
+163;cerf;un
+164;serpent;un
+165;cafard;un
+166;cheval;un
+167;éléphant;un
+168;crocodile;un
+169;araignée;une
+170;chèvre;une
+171;ours;un
+172;fourmi;une
+173;oiseau;un
+174;mouton;un
+176;pêche;une
+177;poire;une
+178;orange;une
+179;banane;une
+180;abricot;un
+181;raisin;un
+182;kiwi;un
+183;litchi;un
+184;cerise;une
+185;fraise;une
+186;pastèque;une
+187;ananas;un
+188;jujube;un
+189;mandarine;une
+190;melon;un
+191;citron;un
+192;mangue;une
+193;maison;une
+194;travaux;des
+195;terrasse;une
+196;pièce;une
+197;escalier;un
+198;cuisine;une
+199;fenêtre;une
+200;salle de bain;une
+201;salon;un
+202;toilettes;les
+203;ordinateur;un
+204;imprimante;une
+205;écran;un
+206;haut-parleur;un
+207;clavier;un
+208;souris;une
+209;ordinateur portable;un
+210;disque dur;un
+211;logiciel;un
+212;programme;un
+213;réseau;un
+214;fichier;un
+215;dossier;un
+216;corbeille;une
+217;connecter;v
+218;télécharger;v
+219;envoyer;v
+220;taxi;un
+221;honte;la
+223;bol;aaa
+225;crier;v
+226;en fait;
+227;merveille;la
+228;gâteau;un
+229;au fait;
+230;d'ailleurs;
+231;gare;une
+232;bras;un
+233;feu de signalisation;un
+234;feu;un
+235;encore;adv
+236;cependant;adv
+237;gens;les
+238;vraiment;adv
+239;important;adj
+240;être debout;v
+241;base de données;une
+242;bureautique;la
+243;répertoire;un
+244;voiture;une
+245;compter;v
+246;train;un
+247;bus;un
+248;vélo;un

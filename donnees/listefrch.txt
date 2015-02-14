@@ -1,0 +1,6 @@
+﻿Animal
+singe;猴子
+chat;猫
+chien;狗
+tigre;老虎
+lion;狮子

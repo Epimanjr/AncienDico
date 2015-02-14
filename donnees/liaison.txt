@@ -1,0 +1,423 @@
+﻿3;frch;prénom;名字
+4;frch;homme;男人
+5;frch;habiter;住
+6;frch;jus de fruit;果汁
+7;frch;thé;茶
+8;frch;eau;水
+9;frch;lait;牛奶
+10;frch;biere;啤酒
+11;frch;bol;碗
+13;frch;epinard;菠菜
+14;frch;aubergine;茄子
+15;frch;tomate;西红柿
+16;frch;patate;土豆
+17;frch;fievre;发烧
+18;frch;vomir;呕吐
+19;frch;besoin;需要
+20;frch;aimer;喜欢
+21;frch;aimer;爱
+22;frch;assiette;盘子
+23;frch;mois;月
+24;frch;annee;年
+25;frch;sexe;性别
+26;frch;pleurer;哭
+27;frch;bonheur;幸福
+28;frch;content;高兴
+29;frch;satisfait;满意的
+30;frch;inquiet;担心的
+31;frch;colère;生气
+32;frch;surpris;使……惊讶
+33;frch;incroyable;难以置信的
+34;frch;manger;吃
+35;frch;boire;喝
+36;frch;soif;渴
+37;frch;faim;饿
+38;frch;malade;生病
+39;frch;gorge;喉咙
+40;frch;mal de gorge;喉咙痛
+41;frch;qui;谁
+42;frch;quoi;什么
+43;frch;où;哪里
+44;frch;pourquoi;为什么
+45;frch;combien;多少
+46;frch;clavier;键盘
+47;frch;logiciel;软件
+48;frch;nom;姓
+49;frch;pièce d'identité;神分证
+50;frch;âge;岁数
+51;frch;célibataire;未婚
+52;frch;date de naissance;出生日期
+53;frch;divorcé;离异
+54;frch;nationalité;国籍
+55;frch;lieu de naissance;出生地
+56;frch;présenter;介绍
+57;frch;passeport;护照
+58;frch;connaître;认识
+59;frch;identité;身份
+60;frch;marié;已婚
+61;frch;cv;简历
+62;frch;curriculum vitae;简历
+63;frch;diplôme;学位
+64;frch;coordonnées;联系方式
+65;frch;téléphone professionnel;办公电话
+66;frch;cursus;学历
+67;frch;adresse;地址
+68;frch;profession;职业
+69;frch;téléphone personnel;个人电话
+70;frch;niveau d'études;教育程度
+71;frch;expérience professionnelle;工作经历
+72;frch;numéro de téléphone;电话号码
+73;frch;loisirs;业余爱好
+74;frch;loisir;业余爱好
+75;frch;spécialité;专业
+76;frch;poste recherché;希望职位
+77;frch;adresse e-mail;电子邮件地址
+78;frch;adresse email;电子邮件地址
+79;frch;caractère;性格
+80;frch;yeux;眼睛
+81;frch;tête;头
+82;frch;sentir;闻
+83;frch;écouter;听
+84;frch;cure-dent;牙签
+85;frch;fourchette;叉子
+86;frch;couteau;刀子
+87;frch;cuillère;勺子
+88;frch;tasse;杯子
+89;frch;serviette;餐巾纸
+90;frch;haricot;扁豆
+91;frch;tofu;豆腐
+92;frch;poivron vert;青椒
+93;frch;pomme de terre;土豆
+94;frch;brocoli;西兰花
+95;frch;chou;洋白菜
+96;frch;maïs;玉米
+97;frch;blé;玉米
+98;frch;bambou;竹笋
+99;frch;acheter;买
+100;frch;vendre;卖
+101;frch;je;我
+102;frch;tu;你
+103;frch;je t'aime;我爱你
+104;frch;soupe aux oeufs;蛋花汤
+105;frch;la livre;斤
+106;frch;gramme;克
+107;frch;kilogramme;公斤
+108;frch;milligramme;毫克
+109;frch;litre;升
+110;frch;centimètre;厘米
+111;frch;kilomètre;公里
+112;frch;mètre;米
+113;frch;blanc;白色
+114;frch;couleur;颜色
+115;frch;rose;粉红色
+116;frch;noir;黑色
+117;frch;rouge;红色
+118;frch;jaune;黄色
+119;frch;bleu;蓝色
+120;frch;violet;紫色
+121;frch;fruit;水果
+122;frch;pomme;苹果
+123;frch;orange;桔子
+124;frch;animal;动物
+125;frch;cochon;猪
+126;frch;corbeau;乌鸦
+127;frch;insecte;昆虫
+128;frch;chien;狗
+129;frch;singe;猴子
+130;frch;aigle;老鹰
+131;frch;mouche;苍蝇
+132;frch;chat;猫
+133;frch;lion;狮子
+134;frch;poisson;鱼
+135;frch;moustique;蚊子
+136;frch;souris;老鼠
+137;frch;loup;狼
+138;frch;tortue;乌龟
+139;frch;papillon;蝴蝶
+140;frch;lapin;兔子
+141;frch;tigre;老虎
+142;frch;grenouille;青蛙
+143;frch;abeille;蜜蜂
+144;frch;vache;牛
+145;frch;cerf;鹿
+146;frch;serpent;蛇
+147;frch;cafard;蟑螂
+148;frch;cheval;马
+149;frch;éléphant;大象
+150;frch;crocodile;鳄鱼
+151;frch;araignée;蜘蛛
+152;frch;chèvre;山羊
+153;frch;ours;熊
+154;frch;fourmi;蚂蚁
+155;frch;oiseau;鸟
+156;frch;mouton;羊
+157;frch;pêche;桃子
+158;frch;poire;梨
+159;frch;orange;橙子
+160;frch;banane;香蕉
+161;frch;abricot;杏儿
+162;frch;raisin;葡萄
+163;frch;kiwi;猕猴桃
+164;frch;litchi;荔枝
+165;frch;cerise;樱桃
+166;frch;fraise;草莓
+167;frch;pastèque;西瓜
+168;frch;ananas;菠萝
+169;frch;jujube;枣儿
+170;frch;mandarine;橘子
+171;frch;melon;香瓜
+172;frch;citron;柠檬
+173;frch;mangue;芒果
+174;frch;maison;房子
+175;frch;travaux;装修
+176;frch;terrasse;阳台
+177;frch;pièce;房间
+178;frch;escalier;楼梯
+179;frch;cuisine;厨房
+180;frch;fenêtre;窗户
+181;frch;salle de bain;浴室
+182;frch;salon;客厅
+183;frch;toilettes;厕所
+184;frch;ordinateur;电脑
+185;frch;imprimante;打印机
+186;frch;écran;屏幕
+187;frch;haut-parleur;音箱
+188;frch;souris;鼠标
+189;frch;ordinateur portable;笔记本电脑
+190;frch;disque dur;硬盘
+191;frch;programme;程序
+192;frch;réseau;网络
+193;frch;fichier;文件
+194;frch;dossier;文件夹
+195;frch;corbeille;垃圾桶
+196;frch;connecter;连接
+197;frch;télécharger;下载
+198;frch;envoyer;发送
+199;frch;taxi;出租车
+200;frch;honte;耻辱
+201;frch;gare;火车站
+202;frch;train;火车
+203;frch;bus;公共汽车
+204;frch;vélo;自行车
+205;frch;voiture;汽车
+206;fren;nom;name
+207;fren;pièce d'identité;proof of identity
+208;fren;habiter;live
+209;fren;âge;age
+210;fren;célibataire;unmarried
+211;fren;prénom;first name
+212;fren;sexe;sex
+213;fren;date de naissance;date of birth
+214;fren;divorcé;divorce
+215;fren;nationalité;nationality
+216;fren;lieu de naissance;birthplace
+217;fren;présenter;introduce
+218;fren;passeport;passport
+219;fren;homme;man
+220;fren;connaître;know
+221;fren;identité;identity
+222;fren;marié;married
+223;fren;écran;screen
+224;fren;citer;quote
+225;fren;être humain;human being
+226;fren;coordonnées;personal details
+227;fren;mariage;wedding
+228;fren;yeux;eyes
+229;fren;tête;head
+230;fren;écouter;hear
+231;fren;écouter;listen
+232;fren;cure-dent;toothpick
+233;fren;fourchette;fork
+234;fren;couteau;knife
+235;fren;cuillère;spoon
+236;fren;tasse;cup
+237;fren;assiette;dish
+238;fren;bol;bowl
+239;fren;serviette;towel
+240;fren;haricot;haricot
+241;fren;épinard;spinach
+242;fren;tofu;tofu
+243;fren;aubergine;aubergine
+244;fren;poivron vert;green pepper
+245;fren;pomme de terre;potato
+246;fren;patate;potato
+247;fren;tomate;tomato
+248;fren;brocoli;broccoli
+249;fren;chou;cabbage
+250;fren;maïs;corn
+251;fren;blé;corn
+252;fren;bambou;bamboo
+253;fren;acheter;buy
+254;fren;vendre;sell
+255;fren;la livre;pound
+256;fren;gramme;gram
+257;fren;kilogramme;kilogram
+258;fren;milligramme;milligram
+259;fren;litre;litre
+260;fren;centimètre;centimetre
+261;fren;kilomètre;kilometre
+262;fren;mètre;metre
+263;fren;blanc;white
+264;fren;couleur;color
+265;fren;rose;pink
+266;fren;noir;dark
+267;fren;rouge;red
+268;fren;jaune;yellow
+269;fren;orange;orange
+270;fren;bleu;blue
+271;fren;violet;purple
+272;fren;fruit;fruit
+273;fren;pomme;apple
+274;fren;animal;animal
+275;fren;cochon;pig
+276;fren;corbeau;raven
+277;fren;insecte;insect
+278;fren;chien;dog
+279;fren;singe;monkey
+280;fren;aigle;eagle
+281;fren;mouche;fly
+282;fren;chat;cat
+283;fren;lion;lion
+284;fren;poisson;fish
+285;fren;moustique;mosquito
+286;fren;souris;mouse
+287;fren;loup;wolf
+288;fren;tortue;turtle
+289;fren;papillon;butterfly
+290;fren;lapin;rabbit
+291;fren;tigre;tiger
+292;fren;grenouille;frog
+293;fren;abeille;bee
+294;fren;vache;cow
+295;fren;cerf;deer
+296;fren;serpent;snake
+297;fren;cafard;cockroach
+298;fren;cheval;horse
+299;fren;éléphant;elephant
+300;fren;crocodile;crocodile
+301;fren;araignée;spider
+302;fren;chèvre;goat
+303;fren;ours;bear
+304;fren;fourmi;ant
+305;fren;oiseau;bird
+306;fren;mouton;sheep
+307;fren;pêche;peach
+308;fren;poire;pear
+309;fren;banane;banana
+310;fren;abricot;apricot
+311;fren;raisin;grape
+312;fren;kiwi;kiwi
+313;fren;litchi;litchi
+314;fren;cerise;cherry
+315;fren;fraise;strawberry
+316;fren;pastèque;watermelon
+317;fren;ananas;pineapple
+318;fren;jujube;jujube
+319;fren;mandarine;mandarin
+320;fren;melon;melon
+321;fren;citron;lemon
+322;fren;mangue;mango
+323;fren;maison;house
+324;fren;terrasse;terrace
+325;fren;pièce;room
+326;fren;escalier;stairs
+327;fren;cuisine;kitchen
+328;fren;fenêtre;window
+329;fren;salle de bain;bathroom
+330;fren;salon;living room
+331;fren;toilettes;WC
+332;fren;ordinateur;computer
+333;fren;imprimante;printer
+334;fren;haut-parleur;speaker
+335;fren;clavier;keyboard
+336;fren;ordinateur portable;laptop
+337;fren;disque dur;hard drive
+338;fren;logiciel;software
+339;fren;programme;program
+340;fren;réseau;network
+341;fren;fichier;file
+342;fren;dossier;folder
+343;fren;corbeille;trash
+344;fren;connecter;connect
+345;fren;télécharger;download
+346;fren;envoyer;send
+347;fren;taxi;taxi
+348;fren;manger;eat
+349;fren;honte;shame
+350;fren;aimer;love
+351;fren;base de données;database
+352;fren;bureautique;office automation
+353;fren;répertoire;directory
+354;fren;voiture;car
+355;frde;bol;Schale
+356;frde;déranger;stören
+357;frde;crier;brüllen
+358;frde;en fait;eigentlich
+359;frde;merveille;Wunder
+360;frde;gâteau;Torte
+361;frde;au fait;übrigens
+362;frde;d'ailleurs;übrigens
+363;frde;gare;Bahnhof
+364;frde;bras;Arm
+365;frde;feu de signalisation;Ampel
+366;frde;feu;Ampel
+367;frde;encore;noch
+368;frde;cependant;doch
+369;frde;gens;Leute
+370;frde;vraiment;wirklich
+371;frde;important;wichtig
+372;frde;être debout;stehen
+373;frde;chien;Hund
+374;frde;chat;Katze
+375;frde;singe;Affe
+376;frde;cochon;Schwein
+377;frde;corbeau;Rabe
+378;frde;aimer;liebe
+379;frde;compter;zählen
+377;frde;développeur;Entwickler
+378;fren;développeur;developer
+379;fren;a;a
+380;fren;abaissement;lowering
+381;fren;abat;downpour
+382;fren;abus;excess
+383;fren;noix;walnut
+384;fren;gobelet;tumbler
+385;fren;boire;drink
+386;fren;lire;read
+387;fren;banque;bankeee
+388;frde;ordinateur;Rechner
+389;fren;dictionnaire;dictionary
+390;frde;dictionnaire;Wörterbuch
+391;fren;tout;all
+392;frde;tout;all
+393;fren;joindre;combine
+394;frde;joindre;verbinden
+395;fren;reconnaissant;appreciate
+396;fren;aide;assistance
+397;fren;essayer;attempt
+398;fren;tenir pour responsable;blame
+399;fren;meuble;cabinet
+400;fren;équipement;equipment
+401;fren;remplir;fill in
+402;fren;remplir;fill out
+403;fren;introduire;insert
+404;fren;insérer;insert
+405;fren;entretien;maintenance
+406;fren;maintenance;maintenance
+407;fren;omettre;omit
+408;fren;oublier;omit
+409;fren;enlever;remove
+410;fren;retirer;remove
+411;fren;ôter;remove
+412;fren;réparer;repair
+413;fren;demander;request
+414;fren;fourniture;supply
+415;fren;soumettre;submit
+416;fren;commande;order
+417;fren;parler;speak
+418;frde;couvreur;Dachdecker
+419;frde;cantonnier;Straßenarbeiter
+420;frde;mécanicien;Mechaniker
+421;frde;jardinier;Gärtner
+422;frde;carreleur;Fliesenleger
+424;frde;conducteur de bus;Busfahrer
