@@ -7,7 +7,7 @@ import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.JComponent;
 import javax.swing.JPanel;
-import newsupermdico.donnees.Donnees;
+import main.donnees.Donnees;
 
 /**
  *
@@ -29,7 +29,7 @@ public abstract class Panel extends JPanel {
      * Liste des composants du type JTextField dans le Panel.
      */
     private ArrayList<JComponent> listeTextFields;
-    
+
      /**
      * Liste des composants du type JTextField dans le Panel.
      */
@@ -66,7 +66,7 @@ public abstract class Panel extends JPanel {
     public void activerContrasteGeneral() {
         // Application du fond sur le panel
         applicationCouleur("fond", listePanels, true);
-        
+
         // Application sur les JLabels
         applicationCouleur("fond", listeLabels, true);
         applicationCouleur("label", listeLabels, false);
@@ -149,7 +149,7 @@ public abstract class Panel extends JPanel {
     public void setListePanels(ArrayList<JComponent> listePanels) {
         this.listePanels = listePanels;
     }
-    
-    
+
+
 
 }

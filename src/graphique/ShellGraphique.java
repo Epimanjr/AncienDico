@@ -7,7 +7,7 @@ package graphique;
 
 import base.activerecord.Mot;
 import java.util.ArrayList;
-import newsupermdico.Shell;
+import main.Shell;
 
 /**
  *
@@ -20,7 +20,7 @@ public class ShellGraphique extends javax.swing.JPanel {
      */
     public ShellGraphique() {
         initComponents();
-        
+
         s = new Shell(jTextPane1);
     }
 
@@ -69,7 +69,7 @@ public class ShellGraphique extends javax.swing.JPanel {
 
     private void saisieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saisieActionPerformed
         // TODO add your handling code here:
-        
+
         s.traiterLigne(saisie.getText());
 
         // Vidage du champ de saisie
@@ -82,9 +82,9 @@ public class ShellGraphique extends javax.swing.JPanel {
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JTextField saisie;
     // End of variables declaration//GEN-END:variables
-    
 
-    
 
-    
+
+
+
 }

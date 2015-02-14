@@ -17,8 +17,8 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import newsupermdico.Affichage;
-import newsupermdico.donnees.Donnees;
+import main.Affichage;
+import main.donnees.Donnees;
 
 /**
  *
@@ -432,7 +432,7 @@ public class Liaison {
                 this.setIdHorsLigne();
                 pw.println(this.toStringPourFichier());
 
-                // Fermeture 
+                // Fermeture
                 pw.close();
 
                 return true;

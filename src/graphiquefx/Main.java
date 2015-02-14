@@ -10,14 +10,14 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import newsupermdico.donnees.Donnees;
+import main.donnees.Donnees;
 
 /**
  *
  * @author Maxime
  */
 public class Main extends Application {
-    
+
     // Dimension
     public static int width = 700;
     public static int height = 500;
@@ -31,7 +31,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Donnees.init();
-        
+
         Group root = new Group();
         mainFrame = new MainFrame(root);
 

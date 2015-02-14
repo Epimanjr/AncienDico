@@ -22,10 +22,10 @@ import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JLabel;
-import newsupermdico.Affichage;
-import newsupermdico.donnees.Donnees;
-import newsupermdico.donnees.Language;
-import newsupermdico.donnees.ListLanguages;
+import main.Affichage;
+import main.donnees.Donnees;
+import main.donnees.Language;
+import main.donnees.ListLanguages;
 
 /**
  *
@@ -698,7 +698,7 @@ public class Mot {
                 this.setIdHorsLigne();
                 pw.println(this.toStringPourFichier());
 
-                // Fermeture 
+                // Fermeture
                 pw.close();
 
                 return true;

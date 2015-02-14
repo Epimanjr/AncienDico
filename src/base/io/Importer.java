@@ -1,5 +1,5 @@
 /*
- * Cette classe lit les informations à partir des fichiers, 
+ * Cette classe lit les informations à partir des fichiers,
  * et les injecte dans la base de données.
  */
 package base.io;
@@ -14,8 +14,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
-import newsupermdico.Affichage;
-import newsupermdico.donnees.Donnees;
+import main.Affichage;
+import main.donnees.Donnees;
 
 /**
  *
@@ -145,7 +145,7 @@ public class Importer {
     public static void incrementer() {
         // Incrémentation
         compteur++;
-    
+
         // Calcul du pourcentage
         int pourcent = 100 * compteur / Donnees.nombreTotalRequetes;
 

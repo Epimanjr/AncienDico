@@ -8,7 +8,7 @@ package graphique.modifications;
 import base.ModifPressPap;
 import base.activerecord.Liaison;
 import javax.swing.JOptionPane;
-import newsupermdico.donnees.Donnees;
+import main.donnees.Donnees;
 
 /**
  *
@@ -21,7 +21,7 @@ public class PanAjoutLiaisons extends javax.swing.JPanel {
      */
     public PanAjoutLiaisons() {
         initComponents();
-        
+
         /* Activer le contraste */
         activerContraste();
     }
@@ -234,7 +234,7 @@ public class PanAjoutLiaisons extends javax.swing.JPanel {
 
     /**
      * Ajout d'une nouvelle liaison
-     * 
+     *
      * @param type type
      * @param smot1 mot1
      * @param smot2 mot2
@@ -254,8 +254,8 @@ public class PanAjoutLiaisons extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Champs vides.", "Information", JOptionPane.ERROR_MESSAGE);
         }
     }
-    
-    
+
+
     private void jButtonAddFrDeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddFrDeActionPerformed
         // TODO add your handling code here:
 
@@ -388,7 +388,7 @@ public class PanAjoutLiaisons extends javax.swing.JPanel {
         jButtonAddFrDe.setBackground(Donnees.contraste.couleurs.get("boutonFond"));
         jButtonAddFrEn.setForeground(Donnees.contraste.couleurs.get("bouton"));
         jButtonAddFrEn.setBackground(Donnees.contraste.couleurs.get("boutonFond"));
-        
+
         jButton1.setForeground(Donnees.contraste.couleurs.get("bouton"));
         jButton1.setBackground(Donnees.contraste.couleurs.get("boutonFond"));
         jButton2.setForeground(Donnees.contraste.couleurs.get("bouton"));

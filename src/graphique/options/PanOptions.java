@@ -7,8 +7,8 @@ package graphique.options;
 
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
-import newsupermdico.donnees.Donnees;
-import newsupermdico.donnees.Options;
+import main.donnees.Donnees;
+import main.donnees.Options;
 
 /**
  *
@@ -200,6 +200,6 @@ public class PanOptions extends javax.swing.JPanel {
         Options.addValue("voice", voice);
 
         // Sauvegarde
-        
+
     }
 }

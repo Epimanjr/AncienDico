@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import newsupermdico.donnees.Donnees;
+import main.donnees.Donnees;
 
 /**
  *
@@ -68,7 +68,7 @@ public class Completion {
      */
     public String appuyerTouche(KeyEvent evt) {
 
-        // Cas particulier, il ne faut rien faire 
+        // Cas particulier, il ne faut rien faire
         if (evt.getKeyCode() == KeyEvent.VK_ALT) {
             return "";
         }
@@ -97,7 +97,7 @@ public class Completion {
         }
 
         try {
-            // Sélection 
+            // Sélection
             if (!smotcherche.equals(dernierCompletion)) {
                 // Initialisation
                 indiceCompletion = 0;

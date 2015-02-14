@@ -7,8 +7,8 @@ package graphique.liste;
 
 import graphique.Fenetre;
 import javazoom.jl.decoder.JavaLayerException;
-import newsupermdico.donnees.Donnees;
-import newsupermdico.donnees.Options;
+import main.donnees.Donnees;
+import main.donnees.Options;
 
 /**
  *

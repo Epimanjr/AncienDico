@@ -13,7 +13,7 @@ import java.io.UnsupportedEncodingException;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import newsupermdico.donnees.Donnees;
+import main.donnees.Donnees;
 
 /**
  *
@@ -26,7 +26,7 @@ public class PanImportExport extends javax.swing.JPanel {
      */
     public PanImportExport() {
         initComponents();
-        
+
         /* Contraste */
         activerContraste();
     }
@@ -155,22 +155,22 @@ public class PanImportExport extends javax.swing.JPanel {
         @Override
         public void run() {
             jProgressBar1.setStringPainted(true);
-            
+
             /* Initialisation */
             Donnees.nombreTotalRequetes = 0;
-            
+
             try {
                 Exporter.exporterLiaison();
                 jProgressBar1.setValue(50);
-                
+
                 Exporter.exporterMot();
                 jProgressBar1.setValue(100);
-                
+
                 setLabQueryText("Exportation terminée !");
             } catch (UnsupportedEncodingException | FileNotFoundException | SQLException ex) {
                 Logger.getLogger(PanImportExport.class.getName()).log(Level.SEVERE, null, ex);
             }
-            
+
 
         }
 
@@ -227,34 +227,34 @@ public class PanImportExport extends javax.swing.JPanel {
 
             Importer.compteur = 0;
             Importer.importer();
-            
+
             t2.stop();
             setLabQueryText("Importation terminée !");
-            
+
             // Réactivation du bouton
             importer.setEnabled(true);
         }
 
     }
-    
+
     public void activerContraste() {
         /* Modification PANEL */
         this.setBackground(Donnees.contraste.couleurs.get("fond"));
-        
+
         /* LABEL */
         jLabel1.setForeground(Donnees.contraste.couleurs.get("labelTitre"));
         jLabel1.setBackground(Donnees.contraste.couleurs.get("fond"));
-        
+
         labQuery.setForeground(Donnees.contraste.couleurs.get("label"));
         labQuery.setBackground(Donnees.contraste.couleurs.get("fond"));
-        
+
         labTime.setForeground(Donnees.contraste.couleurs.get("label"));
         labTime.setBackground(Donnees.contraste.couleurs.get("fond"));
-        
+
         /* BOUTON */
         exporter.setForeground(Donnees.contraste.couleurs.get("bouton"));
         exporter.setBackground(Donnees.contraste.couleurs.get("boutonFond"));
-        
+
         importer.setForeground(Donnees.contraste.couleurs.get("bouton"));
         importer.setBackground(Donnees.contraste.couleurs.get("boutonFond"));
     }

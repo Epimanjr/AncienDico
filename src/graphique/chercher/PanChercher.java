@@ -10,8 +10,8 @@ import graphique.Panel;
 import java.util.ArrayList;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
-import newsupermdico.donnees.Donnees;
-import newsupermdico.donnees.ListLanguages;
+import main.donnees.Donnees;
+import main.donnees.ListLanguages;
 
 /**
  *

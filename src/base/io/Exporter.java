@@ -12,8 +12,8 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.sql.SQLException;
-import newsupermdico.Affichage;
-import newsupermdico.donnees.Donnees;
+import main.Affichage;
+import main.donnees.Donnees;
 
 /**
  *

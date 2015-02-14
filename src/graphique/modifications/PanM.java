@@ -8,7 +8,7 @@ package graphique.modifications;
 import base.activerecord.Liaison;
 import base.activerecord.Mot;
 import graphique.Fenetre;
-import newsupermdico.donnees.Donnees;
+import main.donnees.Donnees;
 
 /**
  *

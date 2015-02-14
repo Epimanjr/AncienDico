@@ -8,7 +8,7 @@ package graphique.modifications;
 import base.activerecord.Liaison;
 import base.activerecord.Mot;
 import javax.swing.JOptionPane;
-import newsupermdico.donnees.ListLanguages;
+import main.donnees.ListLanguages;
 
 /**
  *
@@ -151,7 +151,7 @@ public class PanAjoutOptimise extends javax.swing.JPanel {
         // Add liaison
         Liaison link = new Liaison(language1 + language2, word1.getNom(), word2.getNom());
         link.insert(false);
-        
+
         // Finish
         JOptionPane.showMessageDialog(null, "Insert with success !", "Insert data", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_boutonValiderActionPerformed

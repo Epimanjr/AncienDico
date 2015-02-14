@@ -4,8 +4,8 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import newsupermdico.Affichage;
-import newsupermdico.donnees.Donnees;
+import main.Affichage;
+import main.donnees.Donnees;
 
 /**
  * Class BaseSetting, qui premet la connexion aux bases de données.

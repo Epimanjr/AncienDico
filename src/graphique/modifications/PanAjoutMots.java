@@ -8,7 +8,7 @@ package graphique.modifications;
 import base.ModifPressPap;
 import base.activerecord.Mot;
 import javax.swing.JOptionPane;
-import newsupermdico.donnees.Donnees;
+import main.donnees.Donnees;
 
 /**
  *

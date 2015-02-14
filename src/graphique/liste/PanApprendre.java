@@ -11,7 +11,7 @@ import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
-import newsupermdico.donnees.Donnees;
+import main.donnees.Donnees;
 
 /**
  *
@@ -23,7 +23,7 @@ public class PanApprendre extends javax.swing.JPanel {
      * Liste à pratiquer.
      */
     ArrayList<Liaison> liste;
-    
+
     /**
      * Panel qui est à l'origine de ce panel
      */
@@ -164,7 +164,7 @@ public class PanApprendre extends javax.swing.JPanel {
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
         // TODO add your handling code here:
-        
+
         p.fen.setContentPane(p);
         p.fen.pack();
     }//GEN-LAST:event_backActionPerformed
@@ -221,7 +221,7 @@ public class PanApprendre extends javax.swing.JPanel {
         l.add(labMot1);
         l.add(labMot2);
         PanChercher.applicationCouleur("fond", l, true);
-        
+
         // Pour la couleur du premier label
         l = new ArrayList<>();
         l.add(labMot1);

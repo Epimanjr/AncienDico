@@ -8,7 +8,7 @@ import graphique.modifications.PanModification;
 import graphique.liste.PanApprendre;
 import graphique.chercher.PanChercher;
 import graphique.internet.PanWordReference;
-import newsupermdico.jlp;
+import main.jlp;
 import graphique.liste.PanListe;
 import graphique.liste.PanPratiquer;
 import graphique.modifications.PanAjoutOptimise;
@@ -19,9 +19,9 @@ import java.awt.GraphicsEnvironment;
 import java.awt.Rectangle;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-import newsupermdico.donnees.Contraste;
-import newsupermdico.donnees.Donnees;
-import static newsupermdico.donnees.Donnees.contraste;
+import main.donnees.Contraste;
+import main.donnees.Donnees;
+import static main.donnees.Donnees.contraste;
 
 /**
  *
@@ -58,7 +58,7 @@ public class Fenetre extends javax.swing.JFrame {
      * Panel qui permet de gérer les listes panListeEn
      */
     public static PanListe panListeEn;
-    
+
     public static PanListe panListeDe;
 
     /**
@@ -114,13 +114,13 @@ public class Fenetre extends javax.swing.JFrame {
             jMenuItem7.setVisible(false);
         }
 
-        setIconImage(new ImageIcon(this.getClass().getResource("iconfrch.png")).getImage());
+        //setIconImage(new ImageIcon(this.getClass().getResource("iconfrch.png")).getImage());
 
         // Initialisation fenêtre
         panChercher = new PanChercher();
         setContentPane(panChercher);
 
-        // Activation du contraste 
+        // Activation du contraste
         // actionBoutonContraste();
         contraste = new Contraste(false);
         activationContraste();
@@ -331,7 +331,7 @@ public class Fenetre extends javax.swing.JFrame {
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
 
-        // Activation du contraste 
+        // Activation du contraste
         actionBoutonContraste();
 
     }//GEN-LAST:event_jMenuItem5ActionPerformed
@@ -410,7 +410,7 @@ public class Fenetre extends javax.swing.JFrame {
 
     private void idemListeFrDeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idemListeFrDeActionPerformed
         // TODO add your handling code here:
-        
+
         panListeDe = new PanListe("fr", "de", this);
         setContentPane(panListeDe);
         pack();
@@ -423,7 +423,7 @@ public class Fenetre extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {

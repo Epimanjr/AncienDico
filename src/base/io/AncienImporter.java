@@ -14,14 +14,14 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import newsupermdico.donnees.Donnees;
+import main.donnees.Donnees;
 
 /**
  *
  * @author Maxime BLAISE
  */
 public class AncienImporter {
-    
+
      /**
      * On importe les anciennes données
      *
@@ -46,7 +46,7 @@ public class AncienImporter {
 
         return false;
     }
-    
+
     /**
      * On importe les anciennes données
      *
@@ -74,8 +74,8 @@ public class AncienImporter {
 
         return false;
     }
-    
-    
+
+
     /**
      * Importation des anciens mots fr
      *
@@ -255,8 +255,8 @@ public class AncienImporter {
             l.insert(false);
         }
     }
-    
-    
+
+
     public static void main(String[] args) {
         /* Initialisation données */
         Donnees.init();
@@ -268,5 +268,5 @@ public class AncienImporter {
             System.out.println("NON OK");
         }
     }
-    
+
 }
