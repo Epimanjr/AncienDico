@@ -1,9 +1,9 @@
 /*
  * This class manage error message, in graphic mode or in console mode.
  */
-package newsupermdico;
+package main;
 
-import newsupermdico.donnees.Donnees;
+import main.donnees.Donnees;
 import javax.swing.JOptionPane;
 
 /**
@@ -11,11 +11,11 @@ import javax.swing.JOptionPane;
  * @author Maxime BLAISE
  */
 public class Affichage {
-    
-    
+
+
     /**
      * Affiche un message d'erreur à l'écran.
-     * 
+     *
      * @param message message
      */
     public static void afficherMessageErreur(String message) {

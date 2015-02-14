@@ -1,7 +1,7 @@
 /*
  * Données nécessaires au bon fonctionnement du programme.
  */
-package newsupermdico.donnees;
+package main.donnees;
 
 import base.BaseSetting;
 import java.util.HashMap;
@@ -50,7 +50,7 @@ public class Donnees {
 
     }
 
-   
+
     private static void initialisationMaps() {
         /* Initialisation des liaisons */
         listeRechercheLiaisons = new HashMap<>();
@@ -76,7 +76,7 @@ public class Donnees {
     public static boolean isModeGraphique() {
         return testerCle("modegraphique");
     }
-    
+
     public static boolean isVoice() {
         return testerCle("voice");
     }

@@ -1,12 +1,12 @@
 /*
  * Console version of this translator.
  */
-package newsupermdico;
+package main;
 
 import base.activerecord.Mot;
 import java.util.ArrayList;
 import java.util.Scanner;
-import newsupermdico.donnees.Donnees;
+import main.donnees.Donnees;
 
 /**
  *
@@ -14,14 +14,14 @@ import newsupermdico.donnees.Donnees;
  * @version 2.0
  */
 public class Shell {
-    
+
     private final int etat_selection_mot = 1;
     private final int etat_neutre = 0;
     private int etat = etat_neutre;
-    
+
     private ArrayList<Mot> listeMots;
     private Mot mot;
-    
+
     private final javax.swing.JTextPane jTextPane1;
 
     /**
@@ -32,21 +32,21 @@ public class Shell {
     public Shell(javax.swing.JTextPane t) {
         this.jTextPane1 = t;
     }
-    
+
     public void traiterLigne(String line) {
         // Récupération des valeurs saisies par l'utilisateur
         String[] lines = line.split(" ");
 
         // Traitement du cas neutre
         traitementCasNeutre(lines);
-        
+
         switch (etat) {
             case etat_selection_mot:
                 traitementCasSelectionMot(lines);
                 break;
         }
     }
-    
+
     private void traitementCasNeutre(String[] lines) {
         // Test sur le premier mot
         switch (lines[0]) {
@@ -90,10 +90,10 @@ public class Shell {
                 iterateur++;
             }
         }
-        
+
         incrementerResultat(message);
     }
-    
+
     private void incrementerResultat(String message) {
         if (jTextPane1 == null) {
             System.out.print(message);
@@ -104,7 +104,7 @@ public class Shell {
                 jTextPane1.setText(jTextPane1.getText() + message);
             }
         }
-        
+
     }
 
     /**
@@ -113,7 +113,7 @@ public class Shell {
      * @param line
      */
     private void selectionMot(String line) {
-        // Initialisation 
+        // Initialisation
         String message = "";
 
         // Conversion en entier
@@ -128,13 +128,13 @@ public class Shell {
 
             // Changement d'état
             etat = etat_selection_mot;
-            
+
             message += "mot " + this.mot + " sélectionné.\n";
         }
-        
+
         incrementerResultat(message);
     }
-    
+
     private void traitementCasSelectionMot(String[] lines) {
         // Flag.
         boolean modification = false;
@@ -169,13 +169,13 @@ public class Shell {
             incrementerResultat(message);
         }
     }
-    
+
     public static void main(String[] args) {
         Shell s = new Shell(null);
 
         // Initialisation
         Donnees.init();
-        
+
         Scanner sc = new Scanner(System.in);
         while (true) {
             System.out.print("YiruMaxDico:$ ");
@@ -183,14 +183,14 @@ public class Shell {
             s.traiterLigne(line);
         }
     }
-    
+
     private void getMotEntierAvecTraduction(String line) {
         // Initialisation
         Mot m = new Mot(line);
         m.setType();
         m.setInformation();
         String message = m.toString() + "\n";
-        
+
         switch (m.getType()) {
             case "fr":
                 message += m.chercher("Chinois", "fr", "ch", null, null);
@@ -199,7 +199,7 @@ public class Shell {
                 break;
             case "en":
                 message += m.chercher("Français", "en", "fr", null, null);
-                
+
                 break;
             case "de":
                 message += m.chercher("Français", "de", "fr", null, null);
@@ -208,7 +208,7 @@ public class Shell {
                 message += m.chercher("Français", "ch", "fr", null, null);
                 break;
         }
-        
+
         incrementerResultat(message);
     }
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package newsupermdico.donnees;
+package main.donnees;
 
 import java.awt.Color;
 import java.io.BufferedReader;
@@ -36,7 +36,7 @@ public class Contraste {
             nomFichier = "eleve.txt";
 
         } else {
-           
+
             // Mode contraste normal
             nomFichier = "default.txt";
         }

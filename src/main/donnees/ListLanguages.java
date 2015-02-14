@@ -1,7 +1,7 @@
 /*
  * List of available languages.
  */
-package newsupermdico.donnees;
+package main.donnees;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -23,32 +23,32 @@ public class ListLanguages extends AbstractData {
      * List of languages.
      */
     public static ArrayList<Language> listLanguages;
-    
+
     /**
      * Constructor.
      */
     public ListLanguages() {
         this.setFilename("donnees/languages.txt");
     }
-    
+
     @Override
     public void generateDefaultFile() {
         PrintWriter pw;
         try {
             // Init
             pw = new PrintWriter(new FileWriter(this.getFilename()));
-            
+
             // Write
             pw.println("English-en");
             pw.println("Français-fr");
             pw.println("Deutsch-de");
-            
+
             // Close
             pw.close();
         } catch (IOException ex) {
             Logger.getLogger(ListLanguages.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
     }
 
 
@@ -56,12 +56,12 @@ public class ListLanguages extends AbstractData {
     public void read() {
         // Init ArrayList
         ListLanguages.listLanguages = new ArrayList<>();
-        
+
         BufferedReader br;
         try {
             // Init reader
             br = new BufferedReader(new FileReader(this.getFilename()));
-            
+
             // Loop for read
             while(br.ready()) {
                 String line = br.readLine();
@@ -70,7 +70,7 @@ public class ListLanguages extends AbstractData {
                     ListLanguages.listLanguages.add(new Language(arrayLine[0], arrayLine[1]));
                 }
             }
-            
+
             // Close
             br.close();
         } catch (FileNotFoundException ex) {
@@ -79,5 +79,5 @@ public class ListLanguages extends AbstractData {
             Logger.getLogger(ListLanguages.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+
 }

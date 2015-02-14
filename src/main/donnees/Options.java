@@ -1,7 +1,7 @@
 /*
  * All options.
  */
-package newsupermdico.donnees;
+package main.donnees;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

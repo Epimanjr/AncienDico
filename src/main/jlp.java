@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package newsupermdico;
+package main;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
@@ -15,7 +15,7 @@ import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.AudioDevice;
 import javazoom.jl.player.FactoryRegistry;
 import javazoom.jl.player.Player;
-import newsupermdico.donnees.Donnees;
+import main.donnees.Donnees;
 
 /**
  *

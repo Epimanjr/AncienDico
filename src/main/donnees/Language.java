@@ -1,20 +1,20 @@
 /*
  * Representing a language.
  */
-package newsupermdico.donnees;
+package main.donnees;
 
 /**
  *
  * @author Maxime BLAISE
  */
 public class Language {
-   
-    
+
+
     /**
      * Abbreviation (example for English : en).
      */
     private String abbr;
-    
+
     /**
      * Name, for example : English.
      */
@@ -22,7 +22,7 @@ public class Language {
 
     /**
      * Constructor of a language.
-     * 
+     *
      * @param abbr Abbreviation.
      * @param name Complete name.
      */
@@ -47,5 +47,5 @@ public class Language {
         this.name = name;
     }
 
-    
+
 }
