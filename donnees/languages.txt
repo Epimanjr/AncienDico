@@ -1,4 +1,4 @@
 English-en
-FranÃ§ais-fr
-Chinese-ch
+Français-fr
 Deutsch-de
+Chinois-ch
