@@ -5,7 +5,7 @@
  */
 package graphique.liste;
 
-import base.activerecord.Liaison;
+import base.activerecord.*;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -26,9 +26,9 @@ import java.util.logging.Logger;
 public class ListeGenerale {
 
     /**
-     * Liste
+     * Links
      */
-    private ArrayList<Liste> liste;
+    private ArrayList<Links> liste;
 
     /**
      * Type 1.
@@ -93,7 +93,7 @@ public class ListeGenerale {
             br = new BufferedReader(new InputStreamReader(new FileInputStream("donnees/liste" + type1 + type2 + ".txt"), "utf8"));
 
             // Boucle de lecture
-            Liste derniereListe = null;
+            Links lastLinks = null;
             while (br.ready()) {
                 // Lecture
                 String line = br.readLine();
@@ -101,17 +101,17 @@ public class ListeGenerale {
 
                 if (lines.length == 1) {
                     // Création d'une nouvelle liste
-                    derniereListe = new Liste(line);
-                    liste.add(derniereListe);
+                    lastLinks = new Links(line);
+                    liste.add(lastLinks);
                 } else {
-                    if (derniereListe == null) {
+                    if (lastLinks == null) {
                         return false;
                     } else {
                         // Ajout de la liaison à la dernière liste
                         if (lines.length != 2) {
                             return false;
                         } else {
-                            derniereListe.liaisons.add(new Liaison(type1 + type2, lines[0], lines[1]));
+                            lastLinks.getListLinks().add(new Liaison(type1 + type2, lines[0], lines[1]));
                         }
                     }
                 }
@@ -141,12 +141,12 @@ public class ListeGenerale {
             pw = new PrintWriter(new OutputStreamWriter(new FileOutputStream("donnees/liste" + type1 + type2 + ".txt"), "utf8"));
 
             // Parcours des listes
-            for (Liste l : this.liste) {
+            for (Links l : this.liste) {
                 // Ecriture du nom
-                pw.println(l.getNom());
+                pw.println(l.getName());
 
                 // Ecriture des liaisons
-                for (Liaison liaison : l.getLiaisons()) {
+                for (Liaison liaison : l.getListLinks()) {
                     pw.println(liaison.getMot1() + ";" + liaison.getMot2());
                 }
             }
@@ -162,7 +162,7 @@ public class ListeGenerale {
         return false;
     }
 
-    public ArrayList<Liste> getListe() {
+    public ArrayList<Links> getLinks() {
         return liste;
     }
 
@@ -174,7 +174,7 @@ public class ListeGenerale {
     public String[] recupererNoms() {
         String[] res = new String[liste.size()];
         for (int i = 0; i < liste.size(); i++) {
-            res[i] = liste.get(i).getNom();
+            res[i] = liste.get(i).getName();
         }
         return res;
     }
@@ -195,8 +195,8 @@ public class ListeGenerale {
      * @param indice indice de la liste
      * @return toutes les liaisons
      */
-    public ArrayList<Liaison> recupererListeLiaisons(int indice) {
-        return this.liste.get(indice).liaisons;
+    public ArrayList<Liaison> getListLinksWithId(int indice) {
+        return this.liste.get(indice).getListLinks();
     }
 
     /**
@@ -204,8 +204,8 @@ public class ListeGenerale {
      *
      * @param text ..
      */
-    public void creerListe(String text) {
-        this.liste.add(new Liste(text));
+    public void createLinks(String text) {
+        this.liste.add(new Links(text));
     }
 
     /**
@@ -220,45 +220,26 @@ public class ListeGenerale {
         Liaison lfrch = new Liaison(type1 + type2, mot1, mot2);
 
         /* Ajout à la bonne liste */
-        this.liste.get(indice).liaisons.add(lfrch);
+        this.liste.get(indice).getListLinks().add(lfrch);
     }
 
     /**
      * Enlève tout de la liste.
      *
-     * @param indiceListe indice
+     * @param indiceLinks indice
      */
-    public void enleverTout(int indiceListe) {
+    public void enleverTout(int indiceLinks) {
         /* Création d'une nouvelle liste */
-        this.liste.get(indiceListe).liaisons = new ArrayList<>();
+        this.liste.get(indiceLinks).setListLinks(new ArrayList<>());
     }
 
     /**
      * Suppression d'une liste.
      *
-     * @param indiceListe indice.
+     * @param indiceLinks indice.
      */
-    public void supprimerListe(int indiceListe) {
-        this.liste.remove(indiceListe);
+    public void removeLinksWithId(int indiceLinks) {
+        this.liste.remove(indiceLinks);
     }
 
-    class Liste {
-
-        private final String nom;
-        public ArrayList<Liaison> liaisons;
-
-        public Liste(String nom) {
-            this.nom = nom;
-            this.liaisons = new ArrayList<>();
-        }
-
-        public String getNom() {
-            return nom;
-        }
-
-        public ArrayList<Liaison> getLiaisons() {
-            return liaisons;
-        }
-
-    }
 }

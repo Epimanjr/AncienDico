@@ -146,11 +146,11 @@ public class Shell {
       int indice = new Integer(line) - 1;
       // Research
       if(this.lg != null) {
-        if(indice < 0 || indice >= this.lg.getListe().size()) {
+        if(indice < 0 || indice >= this.lg.getLinks().size()) {
           message += "Error: wrong indice.";
         } else {
           // Correct here
-          listLinks = lg.recupererListeLiaisons(indice);
+          listLinks = lg.getListLinksWithId(indice);
           // Change state
           etat = etat_selection_list;
           message += "OK";

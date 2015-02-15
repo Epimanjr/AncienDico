@@ -120,7 +120,7 @@ public class PanListe extends javax.swing.JPanel {
      * @return liste bien affiché ou non
      */
     public final boolean afficherListe(int indice) {
-        if (indice < 0 || indice >= lg.getListe().size()) {
+        if (indice < 0 || indice >= lg.getLinks().size()) {
             return false;
         }
 
@@ -131,7 +131,7 @@ public class PanListe extends javax.swing.JPanel {
         }
 
         /* Récupération */
-        ArrayList<Liaison> liste = lg.recupererListeLiaisons(indice);
+        ArrayList<Liaison> liste = lg.getListLinksWithId(indice);
 
         /* Remplissage */
         for (int i = 0; i < liste.size(); i++) {
@@ -346,7 +346,7 @@ public class PanListe extends javax.swing.JPanel {
     private void creerListeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_creerListeActionPerformed
         // TODO add your handling code here:
 
-        lg.creerListe(saisie.getText());
+        lg.createLinks(saisie.getText());
 
         // Modification de la liste
         jList1.setModel(new javax.swing.AbstractListModel() {
@@ -418,7 +418,7 @@ public class PanListe extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Erreur sur liste.", "Information", JOptionPane.ERROR_MESSAGE);
         } else {
             /* Suppression de la liste */
-            lg.supprimerListe(indiceListe);
+            lg.removeLinksWithId(indiceListe);
 
             /* Réactualisation de la liste */
             // Modification de la liste
@@ -589,7 +589,7 @@ public class PanListe extends javax.swing.JPanel {
      */
     public ArrayList<Liaison> recupererLiaisonsEntieres() {
         // Toutes les liaisons
-        ArrayList<Liaison> liaisons = lg.recupererListeLiaisons(indiceListe);
+        ArrayList<Liaison> liaisons = lg.getListLinksWithId(indiceListe);
         liaisons.stream().forEach((l) -> {
             l.setInformations();
         });
