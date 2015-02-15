@@ -32,4 +32,8 @@
   <java jar="MaxTranslator.jar" fork="true" />
 </target>
 
+<target name="jrun">
+  <java jar="MaxTranslator.jar" fork="true" />
+</target>
+
 </project>
