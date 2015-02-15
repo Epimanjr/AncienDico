@@ -49,8 +49,27 @@ public class ListeGenerale {
     public ListeGenerale(String type1, String type2) {
         // Initialisation de la liste
         liste = new ArrayList<>();
+        // Init types of link.
         this.type1 = type1;
         this.type2 = type2;
+    }
+
+    /**
+     * Constructor.
+     *
+     * @param type type
+     */
+    public ListeGenerale(String type) {
+      // Init list
+      liste = new ArrayList<>();
+      // Split type
+      if(type.length() < 4) {
+        this.type1 = type.substring(0,2);
+        this.type2 = type.substring(2,4);
+      } else {
+        this.type1 = null;
+        this.type2 = null;
+      }
     }
 
     public String getType1() {

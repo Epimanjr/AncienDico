@@ -13,6 +13,21 @@
   />
 </target>
 
+<target name="jarshell" depends="compile">
+  <jar destfile="MaxTranslatorShell.jar">
+        <fileset dir="bin"/>
+        <archives>
+          <zips>
+            <fileset dir="lib" includes="**/*.jar"/>
+          </zips>
+        </archives>
+        <manifest>
+          <attribute name="Main-Class"
+            value="main.Shell"/>
+        </manifest>
+  </jar>
+</target>
+
 <target name="jar" depends="compile">
   <jar destfile="MaxTranslator.jar">
         <fileset dir="bin"/>
@@ -26,6 +41,14 @@
             value="graphique.Fenetre"/>
         </manifest>
   </jar>
+</target>
+
+<target name="runshell" depends="jarshell">
+  <java jar="MaxTranslatorShell.jar" fork="true" />
+</target>
+
+<target name="jrunshell">
+  <java jar="MaxTranslatorShell.jar" fork="true" />
 </target>
 
 <target name="run" depends="jar">

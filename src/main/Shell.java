@@ -4,9 +4,11 @@
 package main;
 
 import base.activerecord.Mot;
+import base.activerecord.Liaison;
 import java.util.ArrayList;
 import java.util.Scanner;
 import main.donnees.Donnees;
+import graphique.liste.ListeGenerale;
 
 /**
  *
@@ -17,9 +19,12 @@ public class Shell {
 
     private final int etat_selection_mot = 1;
     private final int etat_neutre = 0;
+    private final int etat_selection_list = 2;
     private int etat = etat_neutre;
 
     private ArrayList<Mot> listeMots;
+    private ArrayList<Liaison> listLinks;
+    private ListeGenerale lg;
     private Mot mot;
 
     private final javax.swing.JTextPane jTextPane1;
@@ -44,6 +49,9 @@ public class Shell {
             case etat_selection_mot:
                 traitementCasSelectionMot(lines);
                 break;
+            case etat_selection_list:
+              traitementCasSelectionList(lines);
+              break;
         }
     }
 
@@ -60,7 +68,11 @@ public class Shell {
                 break;
             case "list":
                 if (lines.length >= 2) {
+                  if(lines.length == 3) {
+                    rechercheListes(lines[1], lines[2]);
+                  } else {
                     rechercheMots(lines[1]);
+                  }
                 }
                 break;
             case "select":
@@ -68,15 +80,35 @@ public class Shell {
                     if (lines[1].equals("mot")) {
                         selectionMot(lines[2]);
                     }
+                    if(lines[1].equals("list")) {
+                      selectionList(lines[2]);
+                    }
                 }
                 break;
         }
     }
 
     /**
+     * Reserch all lists with the languages in parameters.
+     *
+     * @param type1 language 1
+     * @param type2 language 2
+     */
+    private void rechercheListes(String type1, String type2) {
+      // Init list
+      lg = new ListeGenerale(type1, type2);
+      lg.chargerTout();
+      // Print lists available
+      String[] names = lg.recupererNoms();
+      for(int i=0;i<names.length;i++) {
+        System.out.println((i+1) + " " + names[i]);
+      }
+    }
+
+    /**
      * Méthode de recherche d'un mot.
      *
-     * /@param line nom.
+     * @param line nom.
      */
     private void rechercheMots(String line) {
         this.listeMots = new ArrayList<>();
@@ -107,6 +139,29 @@ public class Shell {
 
     }
 
+    private void selectionList(String line) {
+      // Init message
+      String message = "";
+      // Convert line to Integer
+      int indice = new Integer(line) - 1;
+      // Research
+      if(this.lg != null) {
+        if(indice < 0 || indice >= this.lg.getListe().size()) {
+          message += "Error: wrong indice.";
+        } else {
+          // Correct here
+          listLinks = lg.recupererListeLiaisons(indice);
+          // Change state
+          etat = etat_selection_list;
+          message += "OK";
+        }
+      } else {
+        message += "Error: List non initialized.";
+      }
+
+      incrementerResultat(message+"\n");
+    }
+
     /**
      * Sélection d'un mot selon l'indice dans la liste
      *
@@ -133,6 +188,16 @@ public class Shell {
         }
 
         incrementerResultat(message);
+    }
+
+    private void traitementCasSelectionList(String[] lines) {
+      switch(lines[0]) {
+        case "ls":
+          for(Liaison l : this.listLinks) {
+            System.out.println(l);
+          }
+          break;
+      }
     }
 
     private void traitementCasSelectionMot(String[] lines) {
