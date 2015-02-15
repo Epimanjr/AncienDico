@@ -5,8 +5,8 @@
  */
 package graphique.modifications;
 
-import base.activerecord.Liaison;
-import base.activerecord.Mot;
+import base.activerecord.Link;
+import base.activerecord.Word;
 import exception.ChampSaisieVideException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -181,13 +181,13 @@ public class PanModification extends javax.swing.JPanel {
         liaisonCharge = false;
         motCharge = true;
 
-        Object[] mots = Mot.tousLesMots();
+        Object[] mots = Word.tousLesMots();
 
         int taille = mots.length;
         t = taille;
         Object[][] obj = new Object[taille][5];
         for (int i = 0; i < taille; i++) {
-            Mot m = (Mot) mots[i];
+            Word m = (Word) mots[i];
             obj[i][0] = m.getId();
             obj[i][1] = m.getType();
             obj[i][2] = m.getNom();
@@ -207,7 +207,7 @@ public class PanModification extends javax.swing.JPanel {
 
         if (motCharge) {
             /* Création de la nouvelle table de mots */
-            Mot[] tabNouveau = new Mot[t];
+            Word[] tabNouveau = new Word[t];
 
             /* Remplissage */
             for (int i = 0; i < t; i++) {
@@ -218,11 +218,11 @@ public class PanModification extends javax.swing.JPanel {
                 String phonetique = jTable1.getValueAt(i, 3).toString();
                 String genre = jTable1.getValueAt(i, 4).toString();
 
-                tabNouveau[i] = new Mot(id, type, nom, phonetique, genre);
+                tabNouveau[i] = new Word(id, type, nom, phonetique, genre);
             }
 
             /* Mise à jour */
-            ArrayList<String> listeRes = Mot.updateDifference(tabNouveau);
+            ArrayList<String> listeRes = Word.updateDifference(tabNouveau);
 
             String message = "Tous a été mis à jour.";
             if (Donnees.isModeBdd()) {
@@ -236,7 +236,7 @@ public class PanModification extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, message, "Succès", JOptionPane.INFORMATION_MESSAGE);
         } else {
             /* Création de la nouvelle table de mots */
-            Liaison[] tabNouveau = new Liaison[t];
+            Link[] tabNouveau = new Link[t];
 
             /* Remplissage */
             for (int i = 0; i < t; i++) {
@@ -246,11 +246,11 @@ public class PanModification extends javax.swing.JPanel {
                 String mot1 = jTable1.getValueAt(i, 2).toString();
                 String mot2 = jTable1.getValueAt(i, 3).toString();
 
-                tabNouveau[i] = new Liaison(id, type, mot1, mot2);
+                tabNouveau[i] = new Link(id, type, mot1, mot2);
             }
 
             /* Mise à jour */
-            ArrayList<String> listeRes = Liaison.updateDifference(tabNouveau);
+            ArrayList<String> listeRes = Link.updateDifference(tabNouveau);
 
             String message = "Tous a été mis à jour.";
             if (Donnees.isModeBdd()) {
@@ -273,13 +273,13 @@ public class PanModification extends javax.swing.JPanel {
         liaisonCharge = true;
         motCharge = false;
 
-        Object[] liaisons = Liaison.toutesLesLiaisons();
+        Object[] liaisons = Link.toutesLesLiaisons();
 
         int taille = liaisons.length;
         t = taille;
         Object[][] obj = new Object[taille][4];
         for (int i = 0; i < taille; i++) {
-            Liaison m = (Liaison) liaisons[i];
+            Link m = (Link) liaisons[i];
             obj[i][0] = m.getId();
             obj[i][1] = m.getType();
             obj[i][2] = m.getMot1();

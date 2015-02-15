@@ -111,7 +111,7 @@ public class ListeGenerale {
                         if (lines.length != 2) {
                             return false;
                         } else {
-                            lastLinks.getListLinks().add(new Liaison(type1 + type2, lines[0], lines[1]));
+                            lastLinks.getListLinks().add(new Link(type1 + type2, lines[0], lines[1]));
                         }
                     }
                 }
@@ -146,7 +146,7 @@ public class ListeGenerale {
                 pw.println(l.getName());
 
                 // Ecriture des liaisons
-                for (Liaison liaison : l.getListLinks()) {
+                for (Link liaison : l.getListLinks()) {
                     pw.println(liaison.getMot1() + ";" + liaison.getMot2());
                 }
             }
@@ -195,7 +195,7 @@ public class ListeGenerale {
      * @param indice indice de la liste
      * @return toutes les liaisons
      */
-    public ArrayList<Liaison> getListLinksWithId(int indice) {
+    public ArrayList<Link> getListLinksWithId(int indice) {
         return this.liste.get(indice).getListLinks();
     }
 
@@ -217,7 +217,7 @@ public class ListeGenerale {
      */
     public void ajouterValeur(int indice, String mot1, String mot2) {
         /* Création de la liaison */
-        Liaison lfrch = new Liaison(type1 + type2, mot1, mot2);
+        Link lfrch = new Link(type1 + type2, mot1, mot2);
 
         /* Ajout à la bonne liste */
         this.liste.get(indice).getListLinks().add(lfrch);

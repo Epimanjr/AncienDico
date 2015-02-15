@@ -1,7 +1,7 @@
 package base.activerecord;
 
 import base.BaseSetting;
-import static base.activerecord.Mot.correct;
+import static base.activerecord.Word.correct;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -24,7 +24,7 @@ import main.donnees.Donnees;
  *
  * @author Maxime BLAISE
  */
-public class Liaison {
+public class Link {
 
     public static int nombreLiaisons() {
         if (Donnees.isModeBdd()) {
@@ -51,9 +51,9 @@ public class Liaison {
 
                 return compteur;
             } catch (FileNotFoundException ex) {
-                Logger.getLogger(Mot.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Word.class.getName()).log(Level.SEVERE, null, ex);
             } catch (IOException ex) {
-                Logger.getLogger(Mot.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Word.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
 
@@ -83,12 +83,12 @@ public class Liaison {
     /**
      * Objet du mot1.
      */
-    private Mot instancemot1;
+    private Word instancemot1;
 
     /**
      * Objet du mot2.
      */
-    private Mot instancemot2;
+    private Word instancemot2;
 
     /**
      * Constructeur.
@@ -98,7 +98,7 @@ public class Liaison {
      * @param mot1 premier mot
      * @param mot2 deuxième mot
      */
-    public Liaison(int id, String type, String mot1, String mot2) {
+    public Link(int id, String type, String mot1, String mot2) {
         this.id = id;
         this.type = type;
         this.mot1 = mot1;
@@ -112,7 +112,7 @@ public class Liaison {
      * @param mot1 premier mot
      * @param mot2 deuxième mot
      */
-    public Liaison(String type, String mot1, String mot2) {
+    public Link(String type, String mot1, String mot2) {
         this.type = type;
         this.mot1 = mot1;
         this.mot2 = mot2;
@@ -123,8 +123,8 @@ public class Liaison {
      */
     public void setInformations() {
         // Création des mots
-        this.instancemot1 = new Mot(type.substring(0, 2), mot1);
-        this.instancemot2 = new Mot(type.substring(2, 4), mot2);
+        this.instancemot1 = new Word(type.substring(0, 2), mot1);
+        this.instancemot2 = new Word(type.substring(2, 4), mot2);
 
         // Mise à jour des informations
         this.instancemot1.setInformation();
@@ -136,8 +136,8 @@ public class Liaison {
      *
      * @return liste
      */
-    public static ArrayList<Liaison> recupArrayListLiaisons() {
-        ArrayList<Liaison> listeTmp = new ArrayList<>();
+    public static ArrayList<Link> recupArrayListLiaisons() {
+        ArrayList<Link> listeTmp = new ArrayList<>();
 
         if (Donnees.isModeBdd()) {
             // Sélection
@@ -153,7 +153,7 @@ public class Liaison {
                     String smot2 = BaseSetting.getInstante().getResult_set().getString("mot2");
 
                     // Création du mot
-                    Liaison l = new Liaison(sid, stype, smot1, smot2);
+                    Link l = new Link(sid, stype, smot1, smot2);
 
                     // Ajour du mot à la liste
                     listeTmp.add(l);
@@ -197,7 +197,7 @@ public class Liaison {
                     String smot2 = lines[3];
 
                     // Création de la liaison
-                    Liaison l = new Liaison(sid, stype, smot1, smot2);
+                    Link l = new Link(sid, stype, smot1, smot2);
 
                     // Ajout
                     listeTmp.add(l);
@@ -226,7 +226,7 @@ public class Liaison {
      * @param tabNouveau tableau des nouvelles liaisons
      * @return liste des résultats
      */
-    public static ArrayList<String> updateDifference(Liaison[] tabNouveau) {
+    public static ArrayList<String> updateDifference(Link[] tabNouveau) {
         if (Donnees.isModeBdd()) {
             // Récupération de l'existant
             Object[] tabActuel = toutesLesLiaisons();
@@ -236,8 +236,8 @@ public class Liaison {
 
             // Parcours
             for (int i = 0; i < tabActuel.length; i++) {
-                Liaison liaisonActuelle = (Liaison) tabActuel[i];
-                Liaison LiaisonNouvelle = tabNouveau[i];
+                Link liaisonActuelle = (Link) tabActuel[i];
+                Link LiaisonNouvelle = tabNouveau[i];
 
                 // Est-ce différent ?
                 if (!liaisonActuelle.equals(LiaisonNouvelle)) {
@@ -258,7 +258,7 @@ public class Liaison {
                 pw = new PrintWriter(new OutputStreamWriter(new FileOutputStream("donnees/liaison.txt"), "utf8"));
 
                 // Parcours
-                for (Liaison l : tabNouveau) {
+                for (Link l : tabNouveau) {
                     // Ecriture
                     pw.println(l.toStringPourFichier());
                 }
@@ -266,7 +266,7 @@ public class Liaison {
                 // Fermeture
                 pw.close();
             } catch (UnsupportedEncodingException | FileNotFoundException ex) {
-                Logger.getLogger(Mot.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Word.class.getName()).log(Level.SEVERE, null, ex);
             }
 
             return null;
@@ -310,7 +310,7 @@ public class Liaison {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Liaison other = (Liaison) obj;
+        final Link other = (Link) obj;
         if (this.id != other.id) {
             return false;
         }
@@ -367,7 +367,7 @@ public class Liaison {
 
                     try {
                         // Construction de la liaison
-                        Liaison l = new Liaison(new Integer(lines[0]), lines[1], lines[2], lines[3]);
+                        Link l = new Link(new Integer(lines[0]), lines[1], lines[2], lines[3]);
 
                         // Si égal, return true
                         if (this.type.equals(lines[1]) && this.mot1.equals(lines[2]) && this.mot2.equals(lines[3])) {
@@ -386,7 +386,7 @@ public class Liaison {
                 // Exception
                 System.out.println("Erreur: Fichier " + nomFichier + " non trouvé.");
             } catch (IOException ex) {
-                Logger.getLogger(Mot.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Word.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
 
@@ -437,7 +437,7 @@ public class Liaison {
 
                 return true;
             } catch (FileNotFoundException | UnsupportedEncodingException ex) {
-                Logger.getLogger(Liaison.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Link.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
 
@@ -500,12 +500,12 @@ public class Liaison {
 
                     if (lines[1].equals(tmp[1])) {
                         if (tmp[2].equals("mot1") && lines[2].equals(mot)) {
-                            // Liaison trouvé !
+                            // Link trouvé !
                             // Ajout à la liste
                             res.add(lines[3]);
                         }
                         if (tmp[2].equals("mot2") && lines[3].equals(mot)) {
-                            // Liaison trouvé !
+                            // Link trouvé !
                             // Ajout à la liste
                             res.add(lines[2]);
                         }
@@ -549,9 +549,9 @@ public class Liaison {
             br.close();
             this.id = compteur + 1;
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(Mot.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Word.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(Mot.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Word.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -583,19 +583,19 @@ public class Liaison {
         this.mot2 = mot2;
     }
 
-    public Mot getInstancemot1() {
+    public Word getInstancemot1() {
         return instancemot1;
     }
 
-    public void setInstancemot1(Mot instancemot1) {
+    public void setInstancemot1(Word instancemot1) {
         this.instancemot1 = instancemot1;
     }
 
-    public Mot getInstancemot2() {
+    public Word getInstancemot2() {
         return instancemot2;
     }
 
-    public void setInstancemot2(Mot instancemot2) {
+    public void setInstancemot2(Word instancemot2) {
         this.instancemot2 = instancemot2;
     }
 
@@ -606,6 +606,11 @@ public class Liaison {
      */
     public String toStringPourFichier() {
         return (this.id + ";" + this.type + ";" + this.mot1 + ";" + this.mot2);
+    }
+    
+    @Override
+    public String toString() {
+        return this.getInstancemot1() + " <=> " + this.getInstancemot2();
     }
 
 }

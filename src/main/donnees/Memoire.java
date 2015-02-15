@@ -5,7 +5,7 @@
  */
 package main.donnees;
 
-import base.activerecord.Mot;
+import base.activerecord.Word;
 import java.util.ArrayList;
 
 /**
@@ -22,7 +22,7 @@ public class Memoire {
     /**
      * Liste des mots stockés dans YiruMaxDico.
      */
-    public static ArrayList<Mot> listeMots;
+    public static ArrayList<Word> listeMots;
 
     /**
      * Initialisation de la mémoire.

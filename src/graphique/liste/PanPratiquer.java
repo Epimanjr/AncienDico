@@ -5,7 +5,7 @@
  */
 package graphique.liste;
 
-import base.activerecord.Liaison;
+import base.activerecord.Link;
 import graphique.chercher.PanChercher;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,7 +41,7 @@ public class PanPratiquer extends javax.swing.JPanel {
      * @param type .
      * @param p .
      */
-    public PanPratiquer(String nomListe, ArrayList<Liaison> liaisons, String type, PanListe p) {
+    public PanPratiquer(String nomListe, ArrayList<Link> liaisons, String type, PanListe p) {
         initComponents();
 
         this.p = p;
@@ -179,7 +179,7 @@ public class PanPratiquer extends javax.swing.JPanel {
         jLabel1.setText("Exercice sur la liste " + nomListe);
     }
 
-    private void setLiaisons(ArrayList<Liaison> liaisons) {
+    private void setLiaisons(ArrayList<Link> liaisons) {
         // Création de l'objet en fonction de la liste
         Object[][] o = new Object[liaisons.size()][2];
         for (int i = 0; i < liaisons.size(); i++) {
@@ -234,7 +234,7 @@ public class PanPratiquer extends javax.swing.JPanel {
      *
      * @param liaisons liste des liaisons
      */
-    private void initialiserHashMap(ArrayList<Liaison> liaisons) {
+    private void initialiserHashMap(ArrayList<Link> liaisons) {
         // Création
         this.reponses = new HashMap<>();
 

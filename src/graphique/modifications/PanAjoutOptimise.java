@@ -5,8 +5,8 @@
  */
 package graphique.modifications;
 
-import base.activerecord.Liaison;
-import base.activerecord.Mot;
+import base.activerecord.Link;
+import base.activerecord.Word;
 import javax.swing.JOptionPane;
 import main.donnees.ListLanguages;
 
@@ -143,13 +143,13 @@ public class PanAjoutOptimise extends javax.swing.JPanel {
         // Validate all data
         System.out.println("Language 1 : " + this.language1 + " ; Language 2 : " + this.language2);
         // Add word 1
-        Mot word1 = new Mot(this.language1, jTable1.getModel().getValueAt(0, 1).toString(), jTable1.getModel().getValueAt(1, 1).toString(), jTable1.getModel().getValueAt(2, 1).toString());
+        Word word1 = new Word(this.language1, jTable1.getModel().getValueAt(0, 1).toString(), jTable1.getModel().getValueAt(1, 1).toString(), jTable1.getModel().getValueAt(2, 1).toString());
         word1.insert(false);
         // Add word 2
-        Mot word2 = new Mot(this.language2, jTable1.getModel().getValueAt(3, 1).toString(), jTable1.getModel().getValueAt(4, 1).toString(), jTable1.getModel().getValueAt(5, 1).toString());
+        Word word2 = new Word(this.language2, jTable1.getModel().getValueAt(3, 1).toString(), jTable1.getModel().getValueAt(4, 1).toString(), jTable1.getModel().getValueAt(5, 1).toString());
         word2.insert(false);
         // Add liaison
-        Liaison link = new Liaison(language1 + language2, word1.getNom(), word2.getNom());
+        Link link = new Link(language1 + language2, word1.getNom(), word2.getNom());
         link.insert(false);
 
         // Finish

@@ -5,7 +5,7 @@
  */
 package graphique;
 
-import base.activerecord.Mot;
+import base.activerecord.Word;
 import java.util.ArrayList;
 import main.Shell;
 

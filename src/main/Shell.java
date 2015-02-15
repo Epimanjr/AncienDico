@@ -3,8 +3,9 @@
  */
 package main;
 
-import base.activerecord.Mot;
-import base.activerecord.Liaison;
+import base.activerecord.Word;
+import base.activerecord.Link;
+import base.activerecord.Links;
 import java.util.ArrayList;
 import java.util.Scanner;
 import main.donnees.Donnees;
@@ -22,10 +23,10 @@ public class Shell {
     private final int etat_selection_list = 2;
     private int etat = etat_neutre;
 
-    private ArrayList<Mot> listeMots;
-    private ArrayList<Liaison> listLinks;
+    private ArrayList<Word> listeMots;
+    private Links listLinks;
     private ListeGenerale lg;
-    private Mot mot;
+    private Word mot;
 
     private final javax.swing.JTextPane jTextPane1;
 
@@ -50,8 +51,8 @@ public class Shell {
                 traitementCasSelectionMot(lines);
                 break;
             case etat_selection_list:
-              traitementCasSelectionList(lines);
-              break;
+                traitementCasSelectionList(lines);
+                break;
         }
     }
 
@@ -68,11 +69,11 @@ public class Shell {
                 break;
             case "list":
                 if (lines.length >= 2) {
-                  if(lines.length == 3) {
-                    rechercheListes(lines[1], lines[2]);
-                  } else {
-                    rechercheMots(lines[1]);
-                  }
+                    if (lines.length == 3) {
+                        rechercheListes(lines[1], lines[2]);
+                    } else {
+                        rechercheMots(lines[1]);
+                    }
                 }
                 break;
             case "select":
@@ -80,8 +81,8 @@ public class Shell {
                     if (lines[1].equals("mot")) {
                         selectionMot(lines[2]);
                     }
-                    if(lines[1].equals("list")) {
-                      selectionList(lines[2]);
+                    if (lines[1].equals("list")) {
+                        selectionList(lines[2]);
                     }
                 }
                 break;
@@ -95,14 +96,14 @@ public class Shell {
      * @param type2 language 2
      */
     private void rechercheListes(String type1, String type2) {
-      // Init list
-      lg = new ListeGenerale(type1, type2);
-      lg.chargerTout();
-      // Print lists available
-      String[] names = lg.recupererNoms();
-      for(int i=0;i<names.length;i++) {
-        System.out.println((i+1) + " " + names[i]);
-      }
+        // Init list
+        lg = new ListeGenerale(type1, type2);
+        lg.chargerTout();
+        // Print lists available
+        String[] names = lg.recupererNoms();
+        for (int i = 0; i < names.length; i++) {
+            System.out.println((i + 1) + " " + names[i]);
+        }
     }
 
     /**
@@ -112,10 +113,10 @@ public class Shell {
      */
     private void rechercheMots(String line) {
         this.listeMots = new ArrayList<>();
-        Mot[] tmp = Mot.tousLesMotsBis();
+        Word[] tmp = Word.tousLesMotsBis();
         int iterateur = 1;
         String message = "Liste des mots " + line + "\n";
-        for (Mot m : tmp) {
+        for (Word m : tmp) {
             if (m.getNom().equals(line)) {
                 this.listeMots.add(m);
                 message += iterateur + "/ " + m.toString() + " \n";
@@ -140,26 +141,27 @@ public class Shell {
     }
 
     private void selectionList(String line) {
-      // Init message
-      String message = "";
-      // Convert line to Integer
-      int indice = new Integer(line) - 1;
-      // Research
-      if(this.lg != null) {
-        if(indice < 0 || indice >= this.lg.getLinks().size()) {
-          message += "Error: wrong indice.";
+        // Init message
+        String message = "";
+        // Convert line to Integer
+        int indice = new Integer(line) - 1;
+        // Research
+        if (this.lg != null) {
+            if (indice < 0 || indice >= this.lg.getLinks().size()) {
+                message += "Error: wrong indice.";
+            } else {
+                // Correct here
+                this.listLinks = lg.getLinks().get(indice);
+                this.listLinks.setInformation();
+                // Change state
+                etat = etat_selection_list;
+                message += "OK";
+            }
         } else {
-          // Correct here
-          listLinks = lg.getListLinksWithId(indice);
-          // Change state
-          etat = etat_selection_list;
-          message += "OK";
+            message += "Error: List non initialized.";
         }
-      } else {
-        message += "Error: List non initialized.";
-      }
 
-      incrementerResultat(message+"\n");
+        incrementerResultat(message + "\n");
     }
 
     /**
@@ -191,13 +193,11 @@ public class Shell {
     }
 
     private void traitementCasSelectionList(String[] lines) {
-      switch(lines[0]) {
-        case "ls":
-          for(Liaison l : this.listLinks) {
-            System.out.println(l);
-          }
-          break;
-      }
+        switch (lines[0]) {
+            case "ls":
+                System.out.println(listLinks);
+                break;
+        }
     }
 
     private void traitementCasSelectionMot(String[] lines) {
@@ -229,7 +229,7 @@ public class Shell {
 
         // On doit mettre à jour la liste.
         if (modification) {
-            Mot.modifierUnMot(this.mot);
+            Word.modifierUnMot(this.mot);
             message += "OK\n";
             incrementerResultat(message);
         }
@@ -251,7 +251,7 @@ public class Shell {
 
     private void getMotEntierAvecTraduction(String line) {
         // Initialisation
-        Mot m = new Mot(line);
+        Word m = new Word(line);
         m.setType();
         m.setInformation();
         String message = m.toString() + "\n";

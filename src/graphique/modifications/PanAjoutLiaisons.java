@@ -6,7 +6,7 @@
 package graphique.modifications;
 
 import base.ModifPressPap;
-import base.activerecord.Liaison;
+import base.activerecord.Link;
 import javax.swing.JOptionPane;
 import main.donnees.Donnees;
 
@@ -242,7 +242,7 @@ public class PanAjoutLiaisons extends javax.swing.JPanel {
     public void actionAjouter(String type, String smot1, String smot2) {
         // Création de la liaison
         if (!smot1.equals("") && !smot2.equals("")) {
-            Liaison l = new Liaison(type, smot1, smot2);
+            Link l = new Link(type, smot1, smot2);
 
             // Insertion de la liaison
             if (l.insert(false)) {

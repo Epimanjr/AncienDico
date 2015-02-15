@@ -5,8 +5,8 @@
  */
 package graphique.modifications;
 
-import base.activerecord.Liaison;
-import base.activerecord.Mot;
+import base.activerecord.Link;
+import base.activerecord.Word;
 import graphique.Fenetre;
 import main.donnees.Donnees;
 
@@ -124,7 +124,7 @@ public class PanM extends javax.swing.JPanel {
 
         // Création mot fr
         res.setText(res.getText() + "Construction du mot français ... ");
-        Mot motfr = new Mot("fr", nom, phonetique, genre);
+        Word motfr = new Word("fr", nom, phonetique, genre);
         res.setText(res.getText() + "OK -> " + motfr.toString() + "<br/>");
         res.setText(res.getText() + "Ajout du mot français à la base ... ");
         motfr.insert(false);
@@ -132,7 +132,7 @@ public class PanM extends javax.swing.JPanel {
 
         // Création mot ch
         res.setText(res.getText() + "Construction du mot chinois ... ");
-        Mot motch = new Mot("ch", ideo, pinyin, "");
+        Word motch = new Word("ch", ideo, pinyin, "");
         res.setText(res.getText() + "OK -> " + motch.toString() + "<br/>");
         res.setText(res.getText() + "Ajout du mot chinois à la base ... ");
         motch.insert(false);
@@ -140,7 +140,7 @@ public class PanM extends javax.swing.JPanel {
 
         // Création liaison frch
         res.setText(res.getText() + "Construction de la liaison française-chinoise ... ");
-        Liaison frch = new Liaison("frch", nom, ideo);
+        Link frch = new Link("frch", nom, ideo);
         res.setText(res.getText() + "OK -> " + frch.toString() + "<br/>");
         res.setText(res.getText() + "Ajout de la liaison à la base ... ");
         frch.insert(false);

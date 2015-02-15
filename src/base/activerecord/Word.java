@@ -31,11 +31,11 @@ import main.donnees.ListLanguages;
  *
  * @author Maxime
  */
-public class Mot {
+public class Word {
 
-    public static void modifierUnMot(Mot mot) {
+    public static void modifierUnMot(Word mot) {
         // Lecture pour écriture
-        ArrayList<Mot> liste = Mot.recupArrayListMots();
+        ArrayList<Word> liste = Word.recupArrayListMots();
 
         if (Donnees.isModeBdd()) {
 
@@ -45,7 +45,7 @@ public class Mot {
             try {
                 pw = new PrintWriter(new OutputStreamWriter(new FileOutputStream("donnees/mot.txt"), "utf8"));
 
-                for (Mot m : liste) {
+                for (Word m : liste) {
                     if (m.getId() == mot.getId()) {
                         pw.println(mot.toStringPourFichier());
                     } else {
@@ -56,7 +56,7 @@ public class Mot {
                 // Fermeture
                 pw.close();
             } catch (FileNotFoundException | UnsupportedEncodingException ex) {
-                Logger.getLogger(Mot.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Word.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }
@@ -85,6 +85,8 @@ public class Mot {
      * Genre du mot (un/une...)
      */
     private String genre = "";
+    
+    public static int sizeWordInTerminal = 40;
 
     /**
      * Constructeur.
@@ -95,7 +97,7 @@ public class Mot {
      * @param phonetique .
      * @param genre .
      */
-    public Mot(int id, String type, String nom, String phonetique, String genre) {
+    public Word(int id, String type, String nom, String phonetique, String genre) {
         this.id = id;
         this.type = type;
         this.nom = nom;
@@ -111,7 +113,7 @@ public class Mot {
      * @param phonetique .
      * @param genre .
      */
-    public Mot(String type, String nom, String phonetique, String genre) {
+    public Word(String type, String nom, String phonetique, String genre) {
         this.type = type;
         this.nom = nom;
         this.phonetique = phonetique;
@@ -124,7 +126,7 @@ public class Mot {
      * @param type .
      * @param nom .
      */
-    public Mot(String type, String nom) {
+    public Word(String type, String nom) {
         this.type = type;
         this.nom = nom;
     }
@@ -134,7 +136,7 @@ public class Mot {
      *
      * @param nom .
      */
-    public Mot(String nom) {
+    public Word(String nom) {
         this.nom = nom;
     }
 
@@ -209,7 +211,7 @@ public class Mot {
      * @param tabNouveau .
      * @return liste des résultats
      */
-    public static ArrayList<String> updateDifference(Mot[] tabNouveau) {
+    public static ArrayList<String> updateDifference(Word[] tabNouveau) {
         if (Donnees.isModeBdd()) {
             // Récupération de l'existent
             Object[] tabActuel = tousLesMots();
@@ -219,8 +221,8 @@ public class Mot {
 
             // Parcours
             for (int i = 0; i < tabActuel.length; i++) {
-                Mot motActuel = (Mot) tabActuel[i];
-                Mot motNouveau = tabNouveau[i];
+                Word motActuel = (Word) tabActuel[i];
+                Word motNouveau = tabNouveau[i];
 
                 // Est-ce différent ?
                 if (!motActuel.equals(motNouveau)) {
@@ -241,7 +243,7 @@ public class Mot {
                 pw = new PrintWriter(new OutputStreamWriter(new FileOutputStream("donnees/mot.txt"), "utf8"));
 
                 // Parcours
-                for (Mot m : tabNouveau) {
+                for (Word m : tabNouveau) {
                     // Ecriture
                     pw.println(m.toStringPourFichier());
                 }
@@ -249,7 +251,7 @@ public class Mot {
                 // Fermeture
                 pw.close();
             } catch (UnsupportedEncodingException | FileNotFoundException ex) {
-                Logger.getLogger(Mot.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Word.class.getName()).log(Level.SEVERE, null, ex);
             }
 
             return null;
@@ -271,7 +273,7 @@ public class Mot {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Mot other = (Mot) obj;
+        final Word other = (Word) obj;
         if (this.id != other.id) {
             return false;
         }
@@ -295,14 +297,14 @@ public class Mot {
      *
      * @return tab
      */
-    public static Mot[] tousLesMotsBis() {
+    public static Word[] tousLesMotsBis() {
         // Initialisation
         Object[] o = tousLesMots();
-        Mot[] res = new Mot[o.length];
+        Word[] res = new Word[o.length];
 
         // Parcours pour cast
         for (int i = 0; i < res.length; i++) {
-            res[i] = (Mot) o[i];
+            res[i] = (Word) o[i];
         }
 
         // Fin
@@ -314,9 +316,9 @@ public class Mot {
      *
      * @return liste
      */
-    public static ArrayList<Mot> recupArrayListMots() {
+    public static ArrayList<Word> recupArrayListMots() {
         // Initialisation du résultat
-        ArrayList<Mot> listeTmp = new ArrayList<>();
+        ArrayList<Word> listeTmp = new ArrayList<>();
 
         // Requête de sélection
         if (Donnees.isModeBdd()) {
@@ -332,7 +334,7 @@ public class Mot {
                     String sgenre = BaseSetting.getInstante().getResult_set().getString("genre");
 
                     // Création du mot
-                    Mot mot = new Mot(sid, stype, snom, sphonetique, sgenre);
+                    Word mot = new Word(sid, stype, snom, sphonetique, sgenre);
 
                     // Ajour du mot à la liste
                     listeTmp.add(mot);
@@ -374,7 +376,7 @@ public class Mot {
                     String sgenre = (lines.length > 4) ? lines[4] : "";
 
                     // Création du mot
-                    Mot mot = new Mot(sid, stype, snom, sphonetique, sgenre);
+                    Word mot = new Word(sid, stype, snom, sphonetique, sgenre);
 
                     // Ajout
                     listeTmp.add(mot);
@@ -519,13 +521,13 @@ public class Mot {
         String html = "<font color=\"#b31a1a\">" + texte + "</font> : ";
 
         // Parcours des mots trouvés pour affichage
-        ArrayList<String> motsch = Liaison.chercherMots(this.getType() + typeArrivee, nom);
+        ArrayList<String> motsch = Link.chercherMots(this.getType() + typeArrivee, nom);
         if (motsch != null) {
             if (motsch.isEmpty()) {
                 html += "inconnu";
             }
             for (String s : motsch) {
-                Mot mot = new Mot(typeArrivee, s);
+                Word mot = new Word(typeArrivee, s);
                 mot.setInformation();
 
                 html += "<font color=\"#4d804d\">" + mot.getNom() + "</font> <i>/<font color=\"#4d66cc\">" + mot.getPhonetique() + "</font>/</i>";
@@ -558,10 +560,10 @@ public class Mot {
         String resShell = texte + " : ";
 
         // Parcours des mots trouvés pour affichage
-        ArrayList<String> motsch = Liaison.chercherMots(typeMotDepart + typeMotArrive, nom);
+        ArrayList<String> motsch = Link.chercherMots(typeMotDepart + typeMotArrive, nom);
         if (motsch != null) {
             for (String s : motsch) {
-                Mot mot = new Mot(typeMotArrive, s);
+                Word mot = new Word(typeMotArrive, s);
                 mot.setInformation();
                 res += "<span>" + mot.getGenre() + " " + mot.getNom() + " (" + mot.getPhonetique() + ")</span><br/>";
                 resShell += mot.getNom() + " (" + mot.getPhonetique() + ") ";
@@ -599,7 +601,7 @@ public class Mot {
                     return true;
                 }
             } catch (SQLException ex) {
-                Logger.getLogger(Mot.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Word.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else {
             // Buffer de lecture
@@ -622,7 +624,7 @@ public class Mot {
 
                     try {
                         // Construction du mot
-                        Mot mot = new Mot(new Integer(lines[0]), lines[1], lines[2], sphonetique, sgenre);
+                        Word mot = new Word(new Integer(lines[0]), lines[1], lines[2], sphonetique, sgenre);
 
                         // Si égal, return true
                         /*if(this.equals(mot)) {
@@ -643,7 +645,7 @@ public class Mot {
                 // Exception
                 System.out.println("Erreur: Fichier " + nomFichier + " non trouvé.");
             } catch (IOException ex) {
-                Logger.getLogger(Mot.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Word.class.getName()).log(Level.SEVERE, null, ex);
             }
 
         }
@@ -703,7 +705,7 @@ public class Mot {
 
                 return true;
             } catch (FileNotFoundException | UnsupportedEncodingException ex) {
-                Logger.getLogger(Liaison.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Link.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
 
@@ -761,9 +763,9 @@ public class Mot {
             br.close();
             this.id = compteur + 1;
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(Mot.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Word.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(Mot.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Word.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -848,7 +850,12 @@ public class Mot {
 
     @Override
     public String toString() {
-        return (this.genre + " " + this.nom + " (" + this.phonetique + ")");
+        String res = this.genre + " " + this.nom + " (" + this.phonetique + ")";
+        
+        for(int i=res.length();i<sizeWordInTerminal;i++) {
+            res+=" ";
+        }
+        return res;
     }
 
     /**
@@ -881,9 +888,9 @@ public class Mot {
 
                 return compteur;
             } catch (FileNotFoundException ex) {
-                Logger.getLogger(Mot.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Word.class.getName()).log(Level.SEVERE, null, ex);
             } catch (IOException ex) {
-                Logger.getLogger(Mot.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Word.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
 

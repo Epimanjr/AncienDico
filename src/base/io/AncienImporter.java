@@ -4,8 +4,8 @@
  */
 package base.io;
 
-import base.activerecord.Liaison;
-import base.activerecord.Mot;
+import base.activerecord.Link;
+import base.activerecord.Word;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -99,7 +99,7 @@ public class AncienImporter {
                 genre = lines[2];
             }
             /* Construction du mot  + Insertion */
-            Mot mot = new Mot(new Integer(lines[0]), "fr", lines[1], "", genre);
+            Word mot = new Word(new Integer(lines[0]), "fr", lines[1], "", genre);
             mot.insert(false);
         }
     }
@@ -127,7 +127,7 @@ public class AncienImporter {
                 phonetique = lines[2];
             }
             /* Construction du mot  + Insertion */
-            Mot mot = new Mot(new Integer(lines[0]), "en", lines[1], phonetique, "");
+            Word mot = new Word(new Integer(lines[0]), "en", lines[1], phonetique, "");
             mot.insert(false);
         }
     }
@@ -155,7 +155,7 @@ public class AncienImporter {
                 genre = lines[2];
             }
             /* Construction du mot  + Insertion */
-            Mot mot = new Mot(new Integer(lines[0]), "de", lines[1], "", genre);
+            Word mot = new Word(new Integer(lines[0]), "de", lines[1], "", genre);
             mot.insert(false);
         }
     }
@@ -179,7 +179,7 @@ public class AncienImporter {
             String lines[] = line.split(";");
 
             /* Construction du mot  + Insertion */
-            Mot mot = new Mot(new Integer(lines[0]), "ch", lines[2], lines[1], "");
+            Word mot = new Word(new Integer(lines[0]), "ch", lines[2], lines[1], "");
             mot.insert(false);
         }
     }
@@ -203,7 +203,7 @@ public class AncienImporter {
             String lines[] = line.split(";");
 
             /* Construction de la liaison  + Insertion */
-            Liaison l = new Liaison(new Integer(lines[0]), "frch", lines[1], lines[3]);
+            Link l = new Link(new Integer(lines[0]), "frch", lines[1], lines[3]);
             l.insert(true);
         }
     }
@@ -227,7 +227,7 @@ public class AncienImporter {
             String lines[] = line.split(";");
 
             /* Construction de la liaison  + Insertion */
-            Liaison l = new Liaison(new Integer(lines[0]), "fren", lines[1], lines[2]);
+            Link l = new Link(new Integer(lines[0]), "fren", lines[1], lines[2]);
             l.insert(false);
         }
     }
@@ -251,7 +251,7 @@ public class AncienImporter {
             String lines[] = line.split(";");
 
             /* Construction de la liaison  + Insertion */
-            Liaison l = new Liaison(new Integer(lines[0]), "frde", lines[1], lines[2]);
+            Link l = new Link(new Integer(lines[0]), "frde", lines[1], lines[2]);
             l.insert(false);
         }
     }

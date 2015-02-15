@@ -5,7 +5,7 @@
  */
 package graphique.liste;
 
-import base.activerecord.Liaison;
+import base.activerecord.Link;
 import graphique.Fenetre;
 import graphique.chercher.PanChercher;
 import static graphique.chercher.PanChercher.applicationCouleur;
@@ -131,7 +131,7 @@ public class PanListe extends javax.swing.JPanel {
         }
 
         /* Récupération */
-        ArrayList<Liaison> liste = lg.getListLinksWithId(indice);
+        ArrayList<Link> liste = lg.getListLinksWithId(indice);
 
         /* Remplissage */
         for (int i = 0; i < liste.size(); i++) {
@@ -508,7 +508,7 @@ public class PanListe extends javax.swing.JPanel {
         if (indiceListe < 0) {
             JOptionPane.showMessageDialog(null, "Erreur sur liste.", "Information", JOptionPane.ERROR_MESSAGE);
         } else {
-            ArrayList<String> mots = Liaison.chercherMots(type1 + type2, saisie.getText());
+            ArrayList<String> mots = Link.chercherMots(type1 + type2, saisie.getText());
             /* Ajout de la valeur */
             lg.ajouterValeur(indiceListe, saisie.getText(), mots.get(0));
 
@@ -587,9 +587,9 @@ public class PanListe extends javax.swing.JPanel {
      *
      * @return liste
      */
-    public ArrayList<Liaison> recupererLiaisonsEntieres() {
+    public ArrayList<Link> recupererLiaisonsEntieres() {
         // Toutes les liaisons
-        ArrayList<Liaison> liaisons = lg.getListLinksWithId(indiceListe);
+        ArrayList<Link> liaisons = lg.getListLinksWithId(indiceListe);
         liaisons.stream().forEach((l) -> {
             l.setInformations();
         });

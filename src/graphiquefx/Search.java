@@ -5,7 +5,7 @@
  */
 package graphiquefx;
 
-import base.activerecord.Mot;
+import base.activerecord.Word;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
@@ -71,7 +71,7 @@ public class Search extends Parent {
      * Action de chercher un mot
      */
     private void chercher() {
-        Mot m = new Mot(saisie.getText());
+        Word m = new Word(saisie.getText());
         String html = m.chercherHtml();
         webview.getEngine().loadContent(html);
     }

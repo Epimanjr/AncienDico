@@ -5,7 +5,7 @@
  */
 package graphique.liste;
 
-import base.activerecord.Liaison;
+import base.activerecord.Link;
 import graphique.chercher.PanChercher;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
@@ -22,7 +22,7 @@ public class PanApprendre extends javax.swing.JPanel {
     /**
      * Liste à pratiquer.
      */
-    ArrayList<Liaison> liste;
+    ArrayList<Link> liste;
 
     /**
      * Panel qui est à l'origine de ce panel
@@ -35,7 +35,7 @@ public class PanApprendre extends javax.swing.JPanel {
      * @param liste .
      * @param p Panel qui est à l'origine de ce panel
      */
-    public PanApprendre(ArrayList<Liaison> liste, PanListe p) {
+    public PanApprendre(ArrayList<Link> liste, PanListe p) {
         this.liste = liste;
         this.p = p;
         initComponents();
@@ -191,7 +191,7 @@ public class PanApprendre extends javax.swing.JPanel {
         prec = alea;
 
         /* Sélection liaison */
-        Liaison l = liste.get(alea);
+        Link l = liste.get(alea);
 
         /* Remplissage label */
         labMot1.setText(l.getInstancemot1().toString());

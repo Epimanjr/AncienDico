@@ -10,12 +10,12 @@ public class Links {
     /**
      * The name of this list.
      */
-    private String name;
+    private final String name;
 
     /**
      * List of links.
      */
-    private ArrayList<Liaison> listLinks;
+    private ArrayList<Link> listLinks;
 
     /**
      * Create a new list with a specific name.
@@ -34,7 +34,7 @@ public class Links {
      * @param name .
      * @param list .
      */
-    public Links(String name, ArrayList<Liaison> list) {
+    public Links(String name, ArrayList<Link> list) {
         // Init fields
         this.name = name;
         this.listLinks = list;
@@ -45,9 +45,14 @@ public class Links {
      *
      * @return a message (type String)
      */
-    public String printList() {
+    @Override
+    public String toString() {
         // Init
-        String res = "";
+        String res = "Print list called \"" + this.name + "\" : \n";
+        // Loop
+        for (Link l : this.listLinks) {
+            res += l.toString() + "\n";
+        }
         // Return the result
         return res;
     }
@@ -61,14 +66,22 @@ public class Links {
         return this.name;
     }
 
-    public ArrayList<Liaison> getListLinks() {
+    public ArrayList<Link> getListLinks() {
         return listLinks;
     }
 
-    public void setListLinks(ArrayList<Liaison> listLinks) {
+    public void setListLinks(ArrayList<Link> listLinks) {
         this.listLinks = listLinks;
     }
 
-    
-    
+    /**
+     * Set information in all element of the list.
+     */
+    public void setInformation() {
+        System.out.print("Set information in all list's elements ... ");
+        for(Link l : this.listLinks) {
+            l.setInformations();
+        }
+    }
+
 }

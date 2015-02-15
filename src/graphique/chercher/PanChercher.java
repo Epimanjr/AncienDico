@@ -5,7 +5,7 @@
  */
 package graphique.chercher;
 
-import base.activerecord.Mot;
+import base.activerecord.Word;
 import graphique.Panel;
 import java.util.ArrayList;
 import javax.swing.JComponent;
@@ -219,7 +219,7 @@ public class PanChercher extends Panel {
         long tempsDepart = System.currentTimeMillis();
 
         /* Création d'un nouveau mot */
-        Mot mot = new Mot(jTextField1.getText());
+        Word mot = new Word(jTextField1.getText());
         /* On cherche avec les base de données */
         mot.chercherMaxime(lab0, labLangue1, labLangue1bis, choixLangue1.getSelectedItem().toString());
 

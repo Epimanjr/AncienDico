@@ -5,8 +5,8 @@
  */
 package internet;
 
-import base.activerecord.Liaison;
-import base.activerecord.Mot;
+import base.activerecord.Link;
+import base.activerecord.Word;
 import static internet.Internet.recupererCodeSource;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -306,11 +306,11 @@ public class MyWordReference {
      */
     public void ajouter(boolean force) {
         if (this.verifier() || force) {
-            Mot motfr = new Mot("fr", nom, prononciation, genre);
-            Mot moten = new Mot("en", association, prononciationAssociation, genreAssociation);
-            Mot motde = new Mot("de", associationDe, prononciationDe, genreDe);
-            Liaison l = new Liaison("fren", nom, association);
-            Liaison l2 = new Liaison("frde", nom, associationDe);
+            Word motfr = new Word("fr", nom, prononciation, genre);
+            Word moten = new Word("en", association, prononciationAssociation, genreAssociation);
+            Word motde = new Word("de", associationDe, prononciationDe, genreDe);
+            Link l = new Link("fren", nom, association);
+            Link l2 = new Link("frde", nom, associationDe);
 
             System.out.print("Ajout du motfr " + nom + " ... ");
             boolean b = motfr.insert(false);

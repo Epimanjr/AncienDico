@@ -6,7 +6,7 @@
 package graphique.modifications;
 
 import base.ModifPressPap;
-import base.activerecord.Mot;
+import base.activerecord.Word;
 import javax.swing.JOptionPane;
 import main.donnees.Donnees;
 
@@ -237,7 +237,7 @@ public class PanAjoutMots extends javax.swing.JPanel {
         if (saisieNom.getText().equals("") || saisieGenre.getText().equals("") || saisiePhonetique.getText().equals("")) {
             JOptionPane.showMessageDialog(null, "Erreur: champs vides.", "Information", JOptionPane.ERROR_MESSAGE);
         } else {
-            Mot mot = new Mot(type, saisieNom.getText(), saisiePhonetique.getText(), saisieGenre.getText());
+            Word mot = new Word(type, saisieNom.getText(), saisiePhonetique.getText(), saisieGenre.getText());
             if (mot.insert(false)) {
                 JOptionPane.showMessageDialog(null, "Mot ajouté avec succès.", "Succès", JOptionPane.INFORMATION_MESSAGE);
             } else {

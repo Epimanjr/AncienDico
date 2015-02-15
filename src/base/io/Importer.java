@@ -4,8 +4,8 @@
  */
 package base.io;
 
-import base.activerecord.Liaison;
-import base.activerecord.Mot;
+import base.activerecord.Link;
+import base.activerecord.Word;
 import graphique.Fenetre;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -61,7 +61,7 @@ public class Importer {
         br = new BufferedReader(new InputStreamReader(new FileInputStream("donnees/" + nomFichier), "utf8"));
 
         // On récupère la liste des mots, pour tester leur existence
-        ArrayList<Mot> listeMots = Mot.recupArrayListMots();
+        ArrayList<Word> listeMots = Word.recupArrayListMots();
 
         // Boucle de lecture
         int compteurLigne = 0;
@@ -77,7 +77,7 @@ public class Importer {
 
             try {
                 // Construction du mot
-                Mot mot = new Mot(new Integer(lines[0]), lines[1], lines[2], phonetique, genre);
+                Word mot = new Word(new Integer(lines[0]), lines[1], lines[2], phonetique, genre);
                 if (!listeMots.contains(mot)) {
                     // S'il n'est pas dans la base, on l'insère
                     mot.insert(true);
@@ -109,7 +109,7 @@ public class Importer {
         br = new BufferedReader(new InputStreamReader(new FileInputStream("donnees/" + nomFichier), "utf8"));
 
         // On récupère la liste des liaisons, pour tester leur existence
-        ArrayList<Liaison> listeLiaisons = Liaison.recupArrayListLiaisons();
+        ArrayList<Link> listeLiaisons = Link.recupArrayListLiaisons();
 
         // Boucle de lecture
         int compteurLigne = 0;
@@ -121,7 +121,7 @@ public class Importer {
 
             try {
                 // Construction de la liaison
-                Liaison l = new Liaison(new Integer(lines[0]), lines[1], lines[2], lines[3]);
+                Link l = new Link(new Integer(lines[0]), lines[1], lines[2], lines[3]);
                 if (!listeLiaisons.contains(l)) {
                     // Si elle n'existe pas, on l'insère
                     l.insert(true);
